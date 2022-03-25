@@ -11,4 +11,9 @@ def about(request):
     
     return render(request, 'pages/about.html')
 
+def touristGuideForm(request):
+    return render(request, 'pages/touristGuide-form.html')
+
+def hotelForm(request):
+    return render(request, 'pages/hotel-form.html')
 
