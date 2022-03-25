@@ -7,8 +7,8 @@ def index(request):
 
     return render(request, 'pages/index.html')
 
-def about(request):
+def touristguideform(request):
     
-    return render(request, 'pages/about.html')
+    return render(request, 'pages/touristGuide-form.html')
 
 
