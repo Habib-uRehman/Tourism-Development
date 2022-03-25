@@ -3,6 +3,8 @@
 <html lang="en">
 
 <head>
+    
+    <title>Tourism</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +88,11 @@
             </div>
             <div class="logo-section">
                 <div class="contianer-fluid sub-header p-0">
+<<<<<<< HEAD
                     <a href="/index/" class="brand-logo">
+=======
+                    <a href="index.html" class="brand-logo">
+>>>>>>> 3f16bbf4872c6caf6501cb2ff0c79cf2a90e07b6
                         <img src="{% static 'images/logo.png' %}" alt="">
                     </a>
                 </div>
@@ -634,8 +640,8 @@
     </div>
 
 
-    <script src="assets/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/script/script.js"></script>
+    <script src="{% static 'bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'script/script.js' %}"></script>
     <script>
         document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
             const dropZoneElement = inputElement.closest(".drop-zone");

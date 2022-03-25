@@ -79,21 +79,14 @@
                                 </li>
                             </ul>
 
-                            <!-- <div class="dropdown px-3">
-                    <a href="#" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">ENG</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item text-dark" href="#">Eng</a>
-                        <a class="dropdown-item text-dark" href="#">Urdu</a>
-                        <a class="dropdown-item text-dark" href="#">Pashto</a>
-                    </div>
-                </div> -->
+                           
                         </div>
                     </div>
                 </div>
             </div>
             <div class="logo-section">
                 <div class="contianer-fluid sub-header p-0">
-                    <a href="index.html" class="brand-logo">
+                    <a href="{% url 'index' %}" class="brand-logo">
                         <img src="{% static 'images/logo.png' %}" alt="">
                     </a>
                 </div>
@@ -103,7 +96,7 @@
                     <div class="main-wrapper">
                         <nav class="navbar display-flex justify-content-center">
                             <div class="brand-and-icon d-md-none d-block">
-                                <a href="index.html" class="navbar-brand">
+                                <a href="{% url 'index' %}" class="navbar-brand">
                                     <!-- Tourism -->
                                     <img src="{% static 'images/logo.png' %}" class="d-md-none d-block" alt="">
                                 </a>
@@ -114,7 +107,7 @@
                             <div class="navbar-collapse p-0">
                                 <ul class="navbar-nav list-inline p-md-0 p-4">
                                     <li class="list-inline-item">
-                                        <a href="index.html">Home</a>
+                                        <a href="{% url 'index' %}">Home</a>
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#" class="menu-link">
@@ -146,7 +139,7 @@
                                                 <li><a href="/touristGuide-form/">Tourist Guide</a></li>
                                                 <li><a href="/tourOperator-form/">Tour Operator</a></li>
                                                 <li><a href="#">Travel Agencies</a></li>
-                                                <li><a href="hotel-form.html">Hotel</a></li>
+                                                <li><a href="/hotel-form/">Hotel</a></li>
                                                 <li><a href="#">Restraunts</a></li>
                                             </ul>
                                             <!-- end of items -->
