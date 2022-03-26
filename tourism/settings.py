@@ -32,8 +32,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'bootstrap',
-    'fontawesome',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
