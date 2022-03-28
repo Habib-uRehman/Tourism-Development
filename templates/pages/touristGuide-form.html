@@ -8,9 +8,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'bootstrap-5.1.3-dist/css/bootstrap.min.css' %}">
+    <title>Tourism</title>
+    <<link rel="stylesheet" href="{% static 'bootstrap-5.1.3-dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'style/custom-style.css' %}">
     <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="icon" type="" sizes="32x32" href="{% static 'images/favicon.png'%}" />
+    <link rel="icon" type="" sizes="16x16" href="{% static 'images/favicon.png'%}" />
     <!-- Font Awesome icons -->
     <script src="https://kit.fontawesome.com/f14330b5d4.js" crossorigin="anonymous"></script>
 </head>
@@ -85,7 +88,7 @@
             </div>
             <div class="logo-section">
                 <div class="contianer-fluid sub-header p-0">
-                    <a href="index.html" class="brand-logo">
+                    <a href="/index/" class="brand-logo">
                         <img src="{% static 'images/logo.png' %}" alt="">
                     </a>
                 </div>
@@ -95,7 +98,7 @@
                     <div class="main-wrapper">
                         <nav class="navbar display-flex justify-content-center">
                             <div class="brand-and-icon d-md-none d-block">
-                                <a href="index.html" class="navbar-brand">
+                                <a href="/index/" class="navbar-brand">
                                     <!-- Tourism -->
                                     <img src="{% static 'images/logo.png' %}" class="d-md-none d-block" alt="">
                                 </a>
@@ -106,7 +109,7 @@
                             <div class="navbar-collapse p-0">
                                 <ul class="navbar-nav list-inline p-md-0 p-4">
                                     <li class="list-inline-item">
-                                        <a href="index.html">Home</a>
+                                        <a href="/index/">Home</a>
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#" class="menu-link">
@@ -118,8 +121,8 @@
                                         <div class="sub-menu">
                                             <!-- items -->
                                             <ul class="p-0 text-start">
-                                                <li><a href="about-us-overview.html">Overview of DTS</a></li>
-                                                <li><a href="about-us-features.html">Function Of DTS</a></li>
+                                                <li><a href="/about-us-overview/">Overview of DTS</a></li>
+                                                <li><a href="/about-us-features/">Function Of DTS</a></li>
                                             </ul>
                                             <!-- end of items -->
 
@@ -135,10 +138,10 @@
                                         <div class="sub-menu">
                                             <!-- items -->
                                             <ul class="p-0 text-start">
-                                                <li><a href="{% url 'touristguideform' %}">Tourist Guide</a></li>
-                                                <li><a href="tourOperator-form.html">Tour Operator</a></li>
+                                                <li><a href="/touristGuide-form/">Tourist Guide</a></li>
+                                                <li><a href="/tourOperator-form/">Tour Operator</a></li>
                                                 <li><a href="#">Travel Agencies</a></li>
-                                                <li><a href="hotel-form.html">Hotel</a></li>
+                                                <li><a href="/hotel-form/">Hotel</a></li>
                                                 <li><a href="#">Restraunts</a></li>
                                             </ul>
                                             <!-- end of items -->
@@ -310,34 +313,35 @@
             <div class="container space-y">
                 <!-- <div class="row row-cols-1 g-4"> -->
                 <div class="row touristGuide-content">
-                    <form action="">
+                    <form action="{% url 'touristGuide-form' %}" method="post">
+                        {% csrf_token %}
                         <fieldset>
                             <legend>Tourist Guide Registertaion</legend>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Name Of The Registered Firm</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="firm-name" />
                             </div>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Registered Business Address:</label>
 
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="business-address"  />
 
                                 <small>(If the principal place of business is out-side Pakistan or the company incorporated outside Pakistan give name and address of the duly authorized agent, in Pakistan) <b class="text-danger">*</b></small>
                             </div>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Nature of the Firm:</label>
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" aria-label="Default select example" name="firm-nature">
                                     <option selected>PLease Select</option>
-                                    <option value="1">Proprietary</option>
-                                    <option value="2">Partnership</option>
-                                    <option value="3">Private Company</option>
-                                    <option value="1">Public Company Limited</option>
-                                    <option value="2">Unlimited</option>
+                                    <option value="Proprietary">Proprietary</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Private Company">Private Company</option>
+                                    <option value="Public Company Limited">Public Company Limited</option>
+                                    <option value="Unlimited">Unlimited</option>
                                   </select>
                             </div>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Year of Establishment:</label>
-                                <input type="date" class="form-control" />
+                                <input type="date" class="form-control" name="estamlishment-year" />
                                 <small>(Year of registration in case
                                     of Partnership/company.
                                     Please attach copy of
@@ -345,16 +349,16 @@
                             </div>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label"> Contact Number:</label>
-                                <input type="number" class="form-control" />
+                                <input type="number" class="form-control" name="contact" />
                             </div>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label"> Details of Branch Office:</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="branch-office-details" />
                                 <small>(if any established) <b class="text-danger">*</b></small>
                             </div>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Capital invested:</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="capital-invest" />
 
                                 <small>(please indicate
                                     clearly the paid Up capital and
@@ -363,21 +367,21 @@
                             </div>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Name and address of the Board of Directors/partners/manager indicating qualifications and experience of each in Travel business:</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="board-name-address" />
                                 <small>(separately , for those heading each Branch office) <b class="text-danger">*</b></small>
 
                             </div>
 
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Bank account details</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="bank-account-manager" />
 
                                 <small>(please attached reference from Bank)<b class="text-danger">*</b></small>
                             </div>
 
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Name and address of the Auditors, if any.</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="auditor-name-address" />
                             </div>
 
                             <div class="col-12 my-4">
@@ -385,26 +389,26 @@
                                         With Professional Qualifications
                                         Employed or Proposed to
                                         be Employed :</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="staff-category" />
                                 <small>(separately for each branch office)<b class="text-danger">*</b></small>
                             </div>
 
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Nature of business  </label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="business-nature" />
                                 <small>  (Please give details indicating clearly the field of operation, proposed to be undertaken)<b class="text-danger">*</b></small>
                             </div>
 
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Bank account details</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="bank-account-staff" />
                                 <small> (please attached reference from Bank)<b class="text-danger">*</b></small>
                             </div>
 
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Name and address of the
                                         Auditors, if any.</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name='name-add-auditors' />
                             </div>
 
                             <div class="col-12 my-4">
@@ -412,13 +416,13 @@
                                         with professional qualifications
                                         employed or proposed to
                                         be employed</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="no-of-staff-category" />
 
                                 <small> (separately for each branch office)<b class="text-danger">*</b></small>
                             </div>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Nature of business.</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="nature-of-business" />
                                 <small>(Please give details indicating clearly the field of operation, proposed to be undertaken)<b class="text-danger">*</b></small>
                             </div>
                             <div class="col-12 my-4">
@@ -434,12 +438,12 @@
                                         including foreign agencies
                                         negotiated or proposed
                                         to be acquired.</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="transport-indication" />
                             </div>
                             <div class="col-12 my-4">
                                 <h6>Please give the following details:</h6>
                                 <label for="" class="form-label">¡) Assets:</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="assets" />
 
                                 <label for="" class="form-label">¡¡) Liabilities, clearly showing
                                         investment, Tangible,
@@ -450,24 +454,24 @@
                             </div>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Do you hold a license to deal in foreign exchange?</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="license" />
                                 <small>( If so. Please give your license number and date (enclose statement of foreign exchange Bank Account))<b class="text-danger">*</b></small>
                             </div>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Please give details of your connection with foreign travel agents and tour operators </label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="foreign-travel-details" />
 
                                 <small>(enclose copies of agreement, if any, entered into with them)<b class="text-danger">*</b></small>
                             </div>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Please state if your Manager or a partner or any of the directors of your company have ever been convicted of an offence. If so, please give details.</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="director-details" />
                             </div>
                             <div class="col-12 my-4">
                                 <label for="" class="form-label">Please give a detailed plan
                                         of your office
                                         </label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" name="detailed-plan" />
 
                                 <small>(including each branch office
                                     if any, indicating the space, various
@@ -478,13 +482,13 @@
                                 <label for="" class="form-label">Please make all in one Pdf and Attach: </label>
                                 <div class="drop-zone">
                                     <span class="drop-zone__prompt">Drop file here or click to upload</span>
-                                    <input type="file" name="myFile" class="drop-zone__input">
+                                    <input type="file"  class="drop-zone__input" name="upload-file" >
                                 </div>
                             </div>
 
                             <div class="col-12 my-4 pt-4 text-end">
-                                <button class="btn btn-success btn-lg">Submit</button>
-                                <button class="btn btn-danger btn-lg">Reset</button>
+                                <button class="btn btn-success btn-lg" name="submit-form" value="submit-form" id="submit-form">Submit</button>
+                                <button class="btn btn-danger btn-lg" id="reset-form">Reset</button>
                             </div>
 
                         </fieldset>

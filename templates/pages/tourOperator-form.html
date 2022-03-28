@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourism</title>
-    <link rel="stylesheet" href="assets/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/style/custom-style.css">
-    <link rel="stylesheet" href="assets/style/style.css">
+    <<link rel="stylesheet" href="{% static 'bootstrap-5.1.3-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'style/custom-style.css' %}">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="icon" type="" sizes="32x32" href="{% static 'images/favicon.png'%}" />
+    <link rel="icon" type="" sizes="16x16" href="{% static 'images/favicon.png'%}" />
     <!-- Font Awesome icons -->
     <script src="https://kit.fontawesome.com/f14330b5d4.js" crossorigin="anonymous"></script>
 </head>
@@ -49,22 +52,22 @@
                             <ul class="list-inline px-3 social-icons mt-2">
                                 <li class="list-inline-item">
                                     <a href="" class="btn btn-icon btn-sm">
-                                        <img src="assets/images/facebook-logo.png" width="30" alt="Facebook logo">
+                                        <img src="{% static 'images/facebook-logo.png' %" width="30" alt="Facebook logo">
                                     </a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="" class="btn btn-icon btn-sm">
-                                        <img src="assets/images/instagram.png" width="30" alt="Instagram logo">
+                                        <img src="{% static 'images/instagram.png' %}" width="30" alt="Instagram logo">
                                     </a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="" class="btn btn-icon btn-sm">
-                                        <img src="assets/images/twitter.png" width="30" alt="Twitter logo">
+                                        <img src="{% static 'images/twitter.png' %}" width="30" alt="Twitter logo">
                                     </a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="" class="btn btn-icon btn-sm">
-                                        <img src="assets/images/youtube.png" width="30" alt="Youtube logo">
+                                        <img src="{% static 'images/youtube.png' %}" width="30" alt="Youtube logo">
                                     </a>
                                 </li>
                             </ul>
@@ -83,8 +86,8 @@
             </div>
             <div class="logo-section">
                 <div class="contianer-fluid sub-header p-0">
-                    <a href="index.html" class="brand-logo">
-                        <img src="assets/images/logo.png" alt="">
+                    <a href="/index/" class="brand-logo">
+                        <img src="{% static 'images/logo.png' %}" alt="">
                     </a>
                 </div>
             </div>
@@ -93,9 +96,9 @@
                     <div class="main-wrapper">
                         <nav class="navbar display-flex justify-content-center">
                             <div class="brand-and-icon d-md-none d-block">
-                                <a href="index.html" class="navbar-brand">
+                                <a href="/index/" class="navbar-brand">
                                     <!-- Tourism -->
-                                    <img src="assets/images/logo.png" class="d-md-none d-block" alt="">
+                                    <img src="{% static 'images/logo.png' %}" class="d-md-none d-block" alt="">
                                 </a>
                                 <button type="button" class="navbar-toggler">
                                 <i class="fas fa-bars"></i>
@@ -104,7 +107,7 @@
                             <div class="navbar-collapse p-0">
                                 <ul class="navbar-nav list-inline p-md-0 p-4">
                                     <li class="list-inline-item">
-                                        <a href="index.html">Home</a>
+                                        <a href="/index/">Home</a>
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#" class="menu-link">
@@ -116,8 +119,8 @@
                                         <div class="sub-menu">
                                             <!-- items -->
                                             <ul class="p-0 text-start">
-                                                <li><a href="about-us-overview.html">Overview of DTS</a></li>
-                                                <li><a href="about-us-features.html">Function Of DTS</a></li>
+                                                <li><a href="/about-us-overview/">Overview of DTS</a></li>
+                                                <li><a href="/about-us-features/">Function Of DTS</a></li>
                                             </ul>
                                             <!-- end of items -->
 
@@ -133,10 +136,10 @@
                                         <div class="sub-menu">
                                             <!-- items -->
                                             <ul class="p-0 text-start">
-                                                <li><a href="touristGuide-form.html">Tourist Guide</a></li>
-                                                <li><a href="tourOperator-form.html">Tour Operator</a></li>
+                                                <li><a href="/touristGuide-form/">Tourist Guide</a></li>
+                                                <li><a href="/tourOperator-form/">Tour Operator</a></li>
                                                 <li><a href="#">Travel Agencies</a></li>
-                                                <li><a href="hotel-form.html">Hotel</a></li>
+                                                <li><a href="/hotel-form/">Hotel</a></li>
                                                 <li><a href="#">Restraunts</a></li>
                                             </ul>
                                             <!-- end of items -->
@@ -308,7 +311,8 @@
             <div class="container space-y">
                 <!-- <div class="row row-cols-1 g-4"> -->
                 <div class="row touristGuide-content">
-                    <form action="">
+                    <form action="{% url 'tourOperator-form'%}" method="post">
+                        {% csrf_token %}
                         <fieldset>
                             <legend>Tourist Guide Registertaion</legend>
                             <div class="col-12 my-4">
@@ -476,13 +480,13 @@
                                 <label for="" class="form-label">Please make all in one Pdf and Attach: </label>
                                 <div class="drop-zone">
                                     <span class="drop-zone__prompt">Drop file here or click to upload</span>
-                                    <input type="file" name="myFile" class="drop-zone__input">
+                                    <input type="file" name="myFile" class="drop-zone__input" >
                                 </div>
                             </div>
 
                             <div class="col-12 my-4 pt-4 text-end">
-                                <button class="btn btn-success btn-lg">Submit</button>
-                                <button class="btn btn-danger btn-lg">Reset</button>
+                                <button class="btn btn-success btn-lg" name="submit-button" value="submit-button" id="submit-button">Submit</button>
+                                <button class="btn btn-danger btn-lg" id="reset-form">Reset</button>
                             </div>
 
                         </fieldset>
@@ -631,8 +635,8 @@
     </div>
 
 
-    <script src="assets/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/script/script.js"></script>
+    <script src="{% static 'bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'script/script.js' %}"></script>
     <script>
         document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
             const dropZoneElement = inputElement.closest(".drop-zone");
