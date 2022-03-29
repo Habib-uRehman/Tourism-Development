@@ -17,4 +17,7 @@ def hotelForm(request):
 def tourOperatorForm(request):
     return render(request, 'pages/tourOperator-form.html')
 
+def forms(request):
+    return render(request, 'pages/forms.html')    
+
 
