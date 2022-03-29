@@ -88,8 +88,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'tourism',
         'USER': 'postgres',
-        'PASSWORD': 'Dearlala2@',
-        'HOST': 'localhost'
+        'PASSWORD': 'admin123',
+        'HOST': 'localhost',
+        
     }
 }
  
