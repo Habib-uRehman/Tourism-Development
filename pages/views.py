@@ -10,14 +10,24 @@ def index(request):
 def touristGuideForm(request):
     return render(request, 'pages/touristGuide-form.html')
 
-def hotelForm(request):
-    return render(request, 'pages/hotel-form.html')
+# def hotelForm(request):
+#     return render(request, 'pages/hotel-form.html')
 
 
-def tourOperatorForm(request):
-    return render(request, 'pages/tourOperator-form.html')
+# def tourOperatorForm(request):
+#     return render(request, 'pages/tourOperator-form.html')
 
 def forms(request):
     return render(request, 'pages/forms.html')    
 
 
+def travelagencyform(request):
+    return render(request, 'pages/travel-agency-from.html')    
+
+
+def restrauntform(request):
+    return render(request, 'pages/restraunt-form.html')   
+
+
+def hotelform(request):
+    return render(request, 'pages/hotel-form.html')            

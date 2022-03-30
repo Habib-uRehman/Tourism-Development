@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +7,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourism</title>
-    <link rel="stylesheet" href="assets/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/style/custom-style.css">
-    <link rel="stylesheet" href="assets/style/style.css">
+    <title>Hotel Registeration</title>
+    <link rel="stylesheet" href="{% static 'bootstrap-5.1.3-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'style/custom-style.css' %}">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
     <!-- Font Awesome icons -->
     <script src="https://kit.fontawesome.com/f14330b5d4.js" crossorigin="anonymous"></script>
 </head>
@@ -24,9 +26,9 @@
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center top-header-left">
                             <ul class="list-inline d-flex">
-                                <li class="list-inline-item pr-2"><a href="#">(1234-567891234)</a></li>
+                                <li class="list-inline-item pe-2"><a href="#">(1234-567891234)</a></li>
 
-                                <li class="list-inline-item pl-1"><a href="#">(132demo@gmail.com)</a></li>
+                                <li class="list-inline-item ps-1"><a href="#">(132demo@gmail.com)</a></li>
                             </ul>
                         </div>
                         <div class="ml-auto d-flex align-items-center top-header-right p-2">
@@ -88,7 +90,7 @@
                     </a>
                 </div>
             </div>
-            <div class="fix-header">
+            <div class="fix-header w-100">
                 <div class="container-fluid">
                     <div class="main-wrapper">
                         <nav class="navbar display-flex justify-content-center">
@@ -98,21 +100,21 @@
                                     <img src="assets/images/logo.png" class="d-md-none d-block" alt="">
                                 </a>
                                 <button type="button" class="navbar-toggler">
-                                <i class="fas fa-bars"></i>
-                            </button>
+                                    <i class="fas fa-bars"></i>
+                                </button>
                             </div>
                             <div class="navbar-collapse p-0">
                                 <ul class="navbar-nav list-inline p-md-0 p-4">
                                     <li class="list-inline-item">
-                                        <a href="index.html">Home</a>
+                                        <a href="index.html">Homee</a>
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#" class="menu-link">
-                                        About Us
-                                        <span class="drop-icon">
-                                            <i class="fas fa-chevron-down"></i>
-                                        </span>
-                                    </a>
+                                            About Us
+                                            <span class="drop-icon">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </a>
                                         <div class="sub-menu">
                                             <!-- items -->
                                             <ul class="p-0 text-start">
@@ -125,19 +127,19 @@
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#" class="menu-link">
-                                        Registertaion
-                                        <span class="drop-icon">
-                                            <i class="fas fa-chevron-down"></i>
-                                        </span>
-                                    </a>
+                                            Registertaion
+                                            <span class="drop-icon">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </a>
                                         <div class="sub-menu">
                                             <!-- items -->
                                             <ul class="p-0 text-start">
-                                                <li><a href="touristGuide-form.html">Tourist Guide</a></li>
-                                                <li><a href="tourOperator-form.html">Tour Operator</a></li>
-                                                <li><a href="#">Travel Agencies</a></li>
+                                                <li><a href="travel-agency-from.html">Travel Agencies</a></li>
                                                 <li><a href="hotel-form.html">Hotel</a></li>
-                                                <li><a href="#">Restraunts</a></li>
+                                                <li><a href="restraunt-form.html">Restraunts</a></li>
+                                                <!-- <li><a href="touristGuide-form.html">Travel Agency</a></li> -->
+                                                <!-- <li><a href="tourOperator-form.html">Tour Operator</a></li> -->
                                             </ul>
                                             <!-- end of items -->
 
@@ -145,11 +147,11 @@
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#" class="menu-link">
-                                        Lagislation
-                                        <span class="drop-icon">
-                                            <i class="fas fa-chevron-down"></i>
-                                        </span>
-                                    </a>
+                                            Lagislation
+                                            <span class="drop-icon">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </a>
                                         <div class="sub-menu">
                                             <!-- items -->
                                             <ul class="p-0 text-start">
@@ -162,11 +164,11 @@
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#" class="menu-link">
-                                        Licensing
-                                        <span class="drop-icon">
-                                            <i class="fas fa-chevron-down"></i>
-                                        </span>
-                                    </a>
+                                            Licensing
+                                            <span class="drop-icon">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </a>
                                         <div class="sub-menu">
                                             <!-- items -->
                                             <ul class="p-0 text-start">
@@ -180,11 +182,11 @@
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#" class="menu-link">
-                                        Fees
-                                        <span class="drop-icon">
-                                            <i class="fas fa-chevron-down"></i>
-                                        </span>
-                                    </a>
+                                            Fees
+                                            <span class="drop-icon">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </a>
                                         <div class="sub-menu">
                                             <!-- items -->
                                             <ul class="p-0 text-start">
@@ -198,11 +200,11 @@
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#" class="menu-link">
-                                        Hotel
-                                        <span class="drop-icon">
-                                            <i class="fas fa-chevron-down"></i>
-                                        </span>
-                                    </a>
+                                            Hotel
+                                            <span class="drop-icon">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </a>
                                         <div class="sub-menu">
                                             <!-- items -->
                                             <ul class="p-0 text-start">
@@ -217,11 +219,11 @@
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#" class="menu-link">
-                                        Service Provider
-                                        <span class="drop-icon">
-                                            <i class="fas fa-chevron-down"></i>
-                                        </span>
-                                    </a>
+                                            Service Provider
+                                            <span class="drop-icon">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </a>
 
                                         <div class="sub-menu">
                                             <!-- items -->
@@ -236,11 +238,11 @@
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#" class="menu-link">
-                                        Downloads
-                                        <span class="drop-icon">
-                                            <i class="fas fa-chevron-down"></i>
-                                        </span>
-                                    </a>
+                                            Downloads
+                                            <span class="drop-icon">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </a>
                                         <div class="sub-menu">
                                             <!-- items -->
                                             <ul class="p-0 text-start">
@@ -254,11 +256,11 @@
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#" class="menu-link">
-                                        Featured Destination
-                                        <span class="drop-icon">
-                                            <i class="fas fa-chevron-down"></i>
-                                        </span>
-                                    </a>
+                                            Featured Destination
+                                            <span class="drop-icon">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </a>
                                         <div class="sub-menu">
                                             <!-- items -->
                                             <ul class="p-0 text-start">
@@ -285,6 +287,7 @@
         </header>
         <!-- Header end -->
 
+
         <!-- Main Content Start -->
         <section class="main-content gallery-section">
             <!-- Start Hero Section -->
@@ -292,11 +295,11 @@
                 <div class="container">
                     <div class="row justify-content-center main-heading  space-top-xl-4">
                         <div class=" text-center">
-                            <h1 class="sub-head">Featured Destination</h1>
+                            <h1 class="sub-head">Hotel Registertaion</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                                    <li class="breadcrumb-item active" aria-current="page"> Hotel Registertaion</li>
                                 </ol>
                             </nav>
                         </div>
@@ -306,45 +309,506 @@
 
             <!-- End Hero Section -->
             <div class="container space-y">
-                <div class="row my-5">
-                    <div class="col-md-12 form-box">
-                        <form id="msform">
-                            <!-- progressbar -->
-                            <ul id="progressbar">
-                                <li class="active">Account Setup</li>
-                                <li>Social Profiles</li>
-                                <li>Personal Details</li>
-                            </ul>
-                            <!-- fieldsets -->
-                            <fieldset>
-                                <h2 class="fs-title">Create your account</h2>
-                                <h3 class="fs-subtitle">This is step 1</h3>
-                                <input type="text" name="email" placeholder="Email" />
-                                <input type="password" name="pass" placeholder="Password" />
-                                <input type="password" name="cpass" placeholder="Confirm Password" />
-                                <input type="button" name="next" class="next action-button" value="Next" />
-                            </fieldset>
-                            <fieldset>
-                                <h2 class="fs-title">Social Profiles</h2>
-                                <h3 class="fs-subtitle">Your presence on the social network</h3>
-                                <input type="text" name="twitter" placeholder="Twitter" />
-                                <input type="text" name="facebook" placeholder="Facebook" />
-                                <input type="text" name="gplus" placeholder="Google Plus" />
-                                <input type="button" name="previous" class="previous action-button" value="Previous" />
-                                <input type="button" name="next" class="next action-button" value="Next" />
-                            </fieldset>
-                            <fieldset>
-                                <h2 class="fs-title">Personal Details</h2>
-                                <h3 class="fs-subtitle">We will never sell it</h3>
-                                <input type="text" name="fname" placeholder="First Name" />
-                                <input type="text" name="lname" placeholder="Last Name" />
-                                <input type="text" name="phone" placeholder="Phone" />
-                                <textarea name="address" placeholder="Address"></textarea>
-                                <input type="button" name="previous" class="previous action-button" value="Previous" />
-                                <input type="submit" name="submit" class="submit action-button" value="Submit" />
-                            </fieldset>
-                        </form>
-                    </div>
+                <!-- <div class="row row-cols-1 g-4"> -->
+                <div class="row touristGuide-content">
+                    <form action="">
+                        <fieldset>
+                            <legend>Hotel Registertaion</legend>
+                            <div class="row">
+                                <div class="col-md--12 my-2">
+                                    <label for="" class="form-label">Name Of The Hotel</label>
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 my-2">
+                                    <label for="" class="form-label">Year of Establisment:</label>
+
+                                    <input type="date" class="form-control" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 my-2">
+                                    <label for="" class="form-label">Date of Commission:</label>
+
+                                    <input type="date" class="form-control" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 my-2">
+                                    <label for="" class="form-label">Telex Number:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 my-2">
+                                    <label for="" class="form-label">Telephone Number:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="col-lg-6 col-md-12 my-2">
+                                    <label for="" class="form-label">Address:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="col-lg-6 col-md-12 my-2">
+                                    <label for="" class="form-label">Telegraphic Address:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h5 class="mt-4 mb-2">
+                                    <u>
+                                        Location
+                                    </u>
+                                </h5>
+                                <div class="col-md-4 my-2">
+                                    <label for="" class="form-label">Province:</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>PLease Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                      </select>
+                                </div>
+                                <div class="col-md-4 my-2">
+                                    <label for="" class="form-label">Town:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="col-md-4 my-2">
+                                    <label for="" class="form-label">Street:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <h5 class="mt-4 mb-2">
+                                    <u>
+                                        Ownership
+                                    </u>
+                                </h5>
+                                <div class="col-md-12 my-2">
+                                    <label for="" class="form-label">Nature of Ownership:</label>
+
+                                    <!-- <input type="text" class="form-control" />
+                                    <small>(Please State Whether Sole Proprietorship, firms cooperative, Limited company, etc) <b class="text-danger">*</b></small> -->
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>PLease Select</option>
+                                        <option value="1">Proprietorship</option>
+                                        <option value="2">Cooperative</option>
+                                        <option value="3">Company</option>
+                                        <option value="4">Firms</option>
+                                        <option value="5">Limited Company</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="row owner-input-field">
+                                <div class="col-7">
+                                    <h5 class="mt-4 mb-2 form-Subhead">
+                                        <u>
+                                            Number Of Owners
+                                        </u>
+                                    </h5>
+                                </div>
+                                <div class="col-5 text-end">
+                                    <button class="add-owner-field btn btn-sm text-nowrap btn-success mt-4">Add Owners</button>
+                                </div>
+                                <div class="col-md-12 my-2">
+                                    <div class="">
+                                        <label for="" class="form-label">Fill the Information of Number of Owners you have</label>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-6 my-2">
+                                                <label for="" class="form-label">Name of Owner:</label>
+
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="col-lg-2 col-md-6 my-2">
+                                                <label for="" class="form-label">Owner % :</label>
+
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-12 my-2">
+                                                <label for="" class="form-label">Full Address of Owner:</label>
+
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-12 my-2">
+                                                <label for="" class="form-label">Telegraphic Address of Owner:</label>
+
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 my-2">
+                                                <label for="" class="form-label">Owner Telephone Number:</label>
+
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row hotelManager-input-field">
+                                <div class="col-7">
+                                    <h5 class="mt-4 mb-2 form-Subhead">
+                                        <u>
+                                            Manager
+                                        </u>
+                                    </h5>
+                                </div>
+                                <div class="col-5 text-end">
+                                    <button class="add-hotelManager-field btn btn-sm text-nowrap btn-success mt-4">Add Manager</button>
+                                </div>
+                                <div class="col-md-12 my-2">
+                                    <div class="">
+                                        <label for="" class="form-label">Fill the Information of Number of Owners you have</label>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-6 my-2">
+                                                <label for="" class="form-label">Name of Manager:</label>
+
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="col-lg-2 col-md-6 my-2 text-nowrap">
+                                                <label for="" class="form-label">Manager % :</label>
+
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-12 my-2">
+                                                <label for="" class="form-label">Manager Adress:</label>
+
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-12 my-2">
+                                                <label for="" class="form-label">Manager Telephone Number:</label>
+
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h5 class="mt-4 mb-2">
+                                    <u>
+                                        Land
+                                    </u>
+                                </h5>
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label">Area of Hotel:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label">Covered Area:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label">Area Type:</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>PLease Select Area Type</option>
+                                        <option value="1">Proprietorship</option>
+                                        <option value="2">On Lease</option>
+                                        <option value="3">Mortage</option>
+                                      </select>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <h5 class="mt-4 mb-2">
+                                    <u>
+                                        Costs
+                                    </u>
+                                </h5>
+                                <div class="col-lg-3 col-md-6 my-2">
+                                    <label for="" class="form-label">Cost of Land:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 my-2">
+                                    <label for="" class="form-label">Cost of Building:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 my-2">
+                                    <label for="" class="form-label">Cost of Furniture & Fixtures:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 my-2">
+                                    <label for="" class="form-label">Cost of Equipment:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 my-2">
+                                    <label for="" class="form-label">Working Capital:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 my-2">
+                                    <label for="" class="form-label">Total Investment:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h5 class="mt-4 mb-2">
+                                    <u>
+                                        Building
+                                    </u>
+                                </h5>
+
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label">Number Of Floors:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label">Number Of Rooms on Each Floor:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label">Nature Of Room:</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>PLease Select</option>
+                                        <option value="1">Single Bed Room</option>
+                                        <option value="2">Double Bed  Room</option>
+                                        <option value="3">Suite Room</option>
+                                      </select>
+                                </div>
+
+                                <div class="col-md-12 my-2">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Nature Of Room</th>
+                                                <th>With Attached Bath</th>
+                                                <th>With Attached Bath</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    <h6>Single Bad Room</h6>
+                                                </th>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="check">
+                                                        <!-- <label class="form-check-label" for="check">
+                                                      Attach Bathroom
+                                                    </label> -->
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="check">
+                                                        <!-- <label class="form-check-label" for="check">
+                                                      Attach Bathroom
+                                                    </label> -->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <h6>Double Bad Room</h6>
+                                                </th>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="check">
+                                                        <!-- <label class="form-check-label" for="check">
+                                                      Attach Bathroom
+                                                    </label> -->
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="check">
+                                                        <!-- <label class="form-check-label" for="check">
+                                                      Attach Bathroom
+                                                    </label> -->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <h6>Suite Room</h6>
+                                                </th>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="check">
+                                                        <!-- <label class="form-check-label" for="check">
+                                                      Attach Bathroom
+                                                    </label> -->
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="check">
+                                                        <!-- <label class="form-check-label" for="check">
+                                                      Attach Bathroom
+                                                    </label> -->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <h6>Total</h6>
+                                                </th>
+                                                <td contenteditable="true">
+
+                                                </td>
+                                                <td contenteditable="true">
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h5 class="mt-4 mb-2">
+                                    <u>
+                                       Public Rooms
+                                    </u>
+                                </h5>
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label">No. Of Staircase:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label">No. Of Lifts:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label">Car Park (Lease Indicate Capacity):</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label">Area of Compund:</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label">Area Of Garden (If any):</label>
+
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label">Date of Completion of Construction :</label>
+
+                                    <input type="date" class="form-control" />
+                                </div>
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="" class="form-label"> Last Date of Renovation (If Any):</label>
+
+                                    <input type="date" class="form-control" />
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 my-2">
+                                    <label for="formFileMultiple" class="form-label">Please Attach a Plan of The Buildingx</label>
+                                    <input class="form-control" type="file" id="formFileMultiple" multiple />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h5 class="mt-4 mb-2">
+                                    <u>
+                                       Employees
+                                    </u>
+                                </h5>
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered employees">
+                                            <thead class="bg-info text-white">
+                                                <tr>
+                                                    <th>Category</th>
+                                                    <th>Total Number</th>
+                                                    <th>Professionally Trained</th>
+                                                    <th>Not Professionally Trained but Experianced</th>
+                                                    <th>Apprentices</th>
+                                                    <th>English Knowing</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>Manager</th>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Reception</th>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Billing</th>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Cooks</th>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Bearers</th>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Other</th>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 my-2 pt-4 text-end">
+                                    <button class="btn btn-success btn-lg">Submit</button>
+                                    <button class="btn btn-danger btn-lg">Reset</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </section>
@@ -490,106 +954,12 @@
 
 
     <!-- <script src="assets/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script> -->
-    <script src="assets/script/script.js"></script>
+    <script src="{% static 'script/script.js' %}"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+    <script src="{% static 'script/addFile.js' %}"></script>
 
-    <script>
-        //jQuery time
-        var current_fs, next_fs, previous_fs; //fieldsets
-        var left, opacity, scale; //fieldset properties which we will animate
-        var animating; //flag to prevent quick multi-click glitches
-
-        $(".next").click(function() {
-            if (animating) return false;
-            animating = true;
-
-            current_fs = $(this).parent();
-            next_fs = $(this).parent().next();
-
-            //activate next step on progressbar using the index of next_fs
-            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
-            //show the next fieldset
-            next_fs.show();
-            //hide the current fieldset with style
-            current_fs.animate({
-                opacity: 0
-            }, {
-                step: function(now, mx) {
-                    //as the opacity of current_fs reduces to 0 - stored in "now"
-                    //1. scale current_fs down to 80%
-                    scale = 1 - (1 - now) * 0.2;
-                    //2. bring next_fs from the right(50%)
-                    left = (now * 50) + "%";
-                    //3. increase opacity of next_fs to 1 as it moves in
-                    opacity = 1 - now;
-                    current_fs.css({
-                        'transform': 'scale(' + scale + ')',
-                        'position': 'absolute'
-                    });
-                    next_fs.css({
-                        'left': left,
-                        'opacity': opacity
-                    });
-                },
-                duration: 800,
-                complete: function() {
-                    current_fs.hide();
-                    animating = false;
-                },
-                //this comes from the custom easing plugin
-                easing: 'easeInOutBack'
-            });
-        });
-
-        $(".previous").click(function() {
-            if (animating) return false;
-            animating = true;
-
-            current_fs = $(this).parent();
-            previous_fs = $(this).parent().prev();
-
-            //de-activate current step on progressbar
-            $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
-            //show the previous fieldset
-            previous_fs.show();
-            //hide the current fieldset with style
-            current_fs.animate({
-                opacity: 0
-            }, {
-                step: function(now, mx) {
-                    //as the opacity of current_fs reduces to 0 - stored in "now"
-                    //1. scale previous_fs from 80% to 100%
-                    scale = 0.8 + (1 - now) * 0.2;
-                    //2. take current_fs to the right(50%) - from 0%
-                    left = ((1 - now) * 50) + "%";
-                    //3. increase opacity of previous_fs to 1 as it moves in
-                    opacity = 1 - now;
-                    current_fs.css({
-                        'left': left
-                    });
-                    previous_fs.css({
-                        'transform': 'scale(' + scale + ')',
-                        'opacity': opacity
-                    });
-                },
-                duration: 800,
-                complete: function() {
-                    current_fs.hide();
-                    animating = false;
-                },
-                //this comes from the custom easing plugin
-                easing: 'easeInOutBack'
-            });
-        });
-
-        $(".submit").click(function() {
-            return false;
-        })
-    </script>
 </body>
 
 </html>
