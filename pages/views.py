@@ -22,7 +22,7 @@ def forms(request):
 
 
 def travelagencyform(request):
-    return render(request, 'pages/travel-agency-from.html')    
+    return render(request, 'pages/travel-agency-form.html')    
 
 
 def restrauntform(request):
