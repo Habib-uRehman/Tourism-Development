@@ -1,18 +1,4 @@
 from django.db import models
-<<<<<<< HEAD
-
-class touristGUideForm(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField(max_length=100)
-    phone = models.CharField(max_length=100)
-    address = models.CharField(max_length=100)
-    city = models.CharField(max_length=100)
-    state = models.CharField(max_length=100)
-    zipcode = models.CharField(max_length=100)
-    country = models.CharField(max_length=100)
-    languages = models.CharField(max_length=100)
-    age = models.IntegerField()
-=======
 from pyexpat import model
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
@@ -51,4 +37,3 @@ class restraunt (models.Model):
 
 
     
->>>>>>> f9f08b041357f759ba9409a043a25b487d8744c4
