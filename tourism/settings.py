@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
+    'restraunt.apps.RestrauntConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
