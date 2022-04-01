@@ -139,6 +139,15 @@ class restraunt (models.Model):
     english_knowing = models.IntegerField(null=True)
 
 
+# Rates Charged    
+    RATES = (
+        ('immeidiatly' , 'IMMEIDIATLY'),
+        ('after dinner' , 'AFTER DINNER'),
+    )
+
+    rates = models.CharField(max_length=100 , choices=RATES , null=True)
+
+
 class furniture_dining(models.Model):
     furniture_type = models.CharField(max_length=100 , null=True)
 
