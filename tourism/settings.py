@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
-    'restraunt.apps.RestrauntConfig',
+    'travel.apps.TravelConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -87,7 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'tourism',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'PASSWORD': 'Dearlala2@',
         'HOST': 'localhost'
     }
 }
