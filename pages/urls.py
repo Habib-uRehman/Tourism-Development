@@ -11,6 +11,6 @@ urlpatterns = [
     path('forms/', views.forms, name = 'forms'),
 
     path('travel-agency-form/', views.travelagencyform,  name = 'travel-agency-form'),
-    path('restraunt-form/', views.restrauntform, name = 'restraunt-form'),
+   
     path('hotel-form/', views.hotelform, name = 'hotel-form'),
 ]
