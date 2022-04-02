@@ -5,6 +5,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.forms import CharField, DateField
 from multiselectfield import MultiSelectField
+from dynamic_models.models import ModelSchema, FieldSchema
 # Create your models here.
 
 class restraunt (models.Model):
