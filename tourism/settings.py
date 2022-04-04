@@ -34,7 +34,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'travel.apps.TravelConfig',
-    
+    'jet',
+    'jet.dashboard',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,7 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'restraunt.apps.RestrauntConfig',
     'multiselectfield',
+    'dynamic_models',  
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -72,6 +76,13 @@ TEMPLATES = [
         },
     },
 ]
+
+
+JET_DEFAULT_THEME = 'light-gray'
+
+JET_SIDE_MENU_COMPACT = True
+
+
 
 WSGI_APPLICATION = 'tourism.wsgi.application'
 
