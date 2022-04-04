@@ -5,7 +5,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.forms import CharField, DateField
 from multiselectfield import MultiSelectField
-from dynamic_models.models import ModelSchema, FieldSchema 
+
+
 
 # Create your models here.
 
@@ -172,7 +173,5 @@ class manager(models.Model):
     manager_percent = models.IntegerField(null=True)
     manager_address = models.TextField(max_length=100 , null=True)
     manager_telephone = models.IntegerField(null=True)
-
-
 
 
