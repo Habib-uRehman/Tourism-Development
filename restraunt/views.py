@@ -29,3 +29,28 @@ def create_book(request, pk):
     }
 
     return render(request, "create_book.html", context)    
+
+
+def gallery1(request):
+    return render (request, 'pages/gallery1.html' )    
+
+
+def gallery2(request):
+    return render (request, 'pages/gallery2.html' ) 
+
+
+def gallery3(request):
+    return render (request, 'pages/gallery3.html' ) 
+
+
+
+def gallery4(request):
+    return render (request, 'pages/gallery4.html' ) 
+
+
+def gallery5(request):
+    return render (request, 'pages/gallery5.html' ) 
+
+
+def gallery6(request):
+    return render (request, 'pages/gallery6.html' ) 
