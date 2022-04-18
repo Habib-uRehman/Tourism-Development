@@ -1,19 +1,21 @@
 {% extends 'main.html' %}
 
+{% load static %}
+
 {% block content %}
 
 
         <!-- Main Content Start -->
         <section class="main-content gallery-section" > 
             <!-- Start Hero Section -->
-            <div class="other-hero hero z-index-2" style="background-image: url(static/images/P1.jpg);">
+            <div class="other-hero hero z-index-2" style="background-image: url(static/images/ziarat/z9.jpg);">
                 <div class="container">
                     <div class="row justify-content-center main-heading  space-top-xl-4">
                         <div class=" text-center">
                             <h1 class="sub-head">Gallery</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Gallery</li>
                                 </ol>
                             </nav>
@@ -32,48 +34,48 @@
                     <div class="row">
 
                         <div class="col-sm-6 col-md-4">
-                            <a class="lightbox" href="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2020/10/Your-Guide-to-Ziarat-Juniper-Forest-C-12-10-1024x640.jpg">
-                                <img src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2020/10/Your-Guide-to-Ziarat-Juniper-Forest-C-12-10-1024x640.jpg" style="height: 240px;">
+                            <a class="lightbox" href="{% static 'images/ziarat/z1.jpg' %}">
+                                <img src="{% static 'images/ziarat/z1.jpg' %}" style="height: 240px;">
                             </a>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <a class="lightbox" href="https://ichef.bbci.co.uk/news/976/cpsprodpb/5DE7/production/_100693042_img_1946.jpg">
-                                <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/5DE7/production/_100693042_img_1946.jpg" style="height: 240px;">
+                            <a class="lightbox" href="{% static 'images/ziarat/z2.jpg' %}">
+                                <img src="{% static 'images/ziarat/z2.jpg' %}" style="height: 240px;">
                             </a>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <a class="lightbox" href="https://www.karachitravellers.pk/myuploads/2021/01/Quetta-Ziarat-Tour-Package-Pakistan-Balochistan.jpg">
-                                <img src="https://www.karachitravellers.pk/myuploads/2021/01/Quetta-Ziarat-Tour-Package-Pakistan-Balochistan.jpg" style="height: 240px;">
+                            <a class="lightbox" href="{% static 'images/ziarat/z3.jpg' %}">
+                                <img src="{% static 'images/ziarat/z3.jpg' %}" style="height: 240px;">
                             </a>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <a class="lightbox" href="https://www.youlinmagazine.com/articles/1554.jpg">
-                                <img src="https://www.youlinmagazine.com/articles/1554.jpg" style="height: 240px;">
+                            <a class="lightbox" href="{% static 'images/ziarat/z4.jpg' %}">
+                                <img src="{% static 'images/ziarat/z4.jpg' %}" style="height: 240px;">
                             </a>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <a class="lightbox" href="http://4.bp.blogspot.com/-9pwyEOXAHao/Uvi-GWIay-I/AAAAAAAAJKI/c1N17Wc9YGM/s1600/ziarat+salman+rashid.jpg">
-                                <img src="http://4.bp.blogspot.com/-9pwyEOXAHao/Uvi-GWIay-I/AAAAAAAAJKI/c1N17Wc9YGM/s1600/ziarat+salman+rashid.jpg" style="height: 240px;">
+                            <a class="lightbox" href="{% static 'images/ziarat/z5.jpg' %}">
+                                <img src="{% static 'images/ziarat/z5.jpg' %}" style="height: 240px;">
                             </a>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <a class="lightbox" href="https://live.staticflickr.com/4210/35749332956_dcc6c540cd_b.jpg">
-                                <img src="https://live.staticflickr.com/4210/35749332956_dcc6c540cd_b.jpg" style="height: 240px;">
+                            <a class="lightbox" href="{% static 'images/ziarat/z6.jpg' %}">
+                                <img src="{% static 'images/ziarat/z6.jpg' %}" style="height: 240px;">
                             </a>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <a class="lightbox" href="https://beautyofpakistan.com/locationimages/prospect-point-ziarat.jpg">
-                                <img src="https://beautyofpakistan.com/locationimages/prospect-point-ziarat.jpg" style="height: 240px;">
+                            <a class="lightbox" href="{% static 'images/ziarat/z7.jpg' %}">
+                                <img src="{% static 'images/ziarat/z7.jpg' %}" style="height: 240px;">
                             </a>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <a class="lightbox" href="https://alpastravels.com/wp-content/uploads/2019/11/Quetta-Ziarat-Slider-Photo-2.jpg">
-                                <img src="https://alpastravels.com/wp-content/uploads/2019/11/Quetta-Ziarat-Slider-Photo-2.jpg" style="height: 240px;">
+                            <a class="lightbox" href="{% static 'images/ziarat/z8.jpg' %}">
+                                <img src="{% static 'images/ziarat/z8.jpg' %}" style="height: 240px;">
                             </a>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <a class="lightbox" href="https://premiotravels.com/wp-content/uploads/2020/02/04-Days-Ziarat-Quetta-Holiday-Travel-Tour-Package.jpg">
-                                <img src="https://premiotravels.com/wp-content/uploads/2020/02/04-Days-Ziarat-Quetta-Holiday-Travel-Tour-Package.jpg" style="height: 240px;">
+                            <a class="lightbox" href="{% static 'images/ziarat/z9.jpg' %}">
+                                <img src="{% static 'images/ziarat/z9.jpg' %}" style="height: 240px;">
                             </a>
                         </div>
                       
