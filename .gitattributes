@@ -1,1 +1,4 @@
 *.html linguist-generated=true
+*.css linguist-generated=true
+*.sass linguist-generated=true
+*.scss linguist-generated=true
