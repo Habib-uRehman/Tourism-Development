@@ -2,3 +2,4 @@
 *.css linguist-generated=true
 *.sass linguist-generated=true
 *.scss linguist-generated=true
+*.js linguist-generated=true
