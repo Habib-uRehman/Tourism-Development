@@ -30,4 +30,13 @@ def restrauntform(request):
 
 
 def hotelform(request):
-    return render(request, 'pages/hotel-form.html')            
+    return render(request, 'pages/hotel-form.html') 
+
+
+def aboutusfeature(request):
+    return render (request, 'pages/about-us-feature.html')      
+
+
+
+def aboutusoverview(request):
+    return render (request, 'pages/about-us-overview.html')    
