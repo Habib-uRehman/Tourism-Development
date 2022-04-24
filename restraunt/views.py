@@ -1,12 +1,30 @@
+from multiprocessing import context
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
-# from .forms import BookFormSet
-# from .models import Author , Book
-# Create your views here.
+from .forms import RestrauntForm
+
 
 def restrauntform(request):
-    return render(request, 'pages/restraunt-form.html')  
+    
+    form = RestrauntForm()
+
+    context = {'form' : form}
+
+    return render(request, 'pages/restraunt-form.html' , {'form' :form})  
+
+
+# def updateUser(request):
+#     user = request.user
+#     form = UserForm(instance=user)
+
+#     if request.method == 'POST':
+#         form = UserForm (request.POST ,request.FILES, instance=user) 
+#         if form.is_valid():
+#            form.save()
+#            return redirect('user-profile' , pk=user.id)
+
+#     return render (request, 'base/update-user.html' , {'form' :form} ) 
 
 
 
