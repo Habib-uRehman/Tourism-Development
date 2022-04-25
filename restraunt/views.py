@@ -1,5 +1,5 @@
 from multiprocessing import context
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from .forms import RestrauntForm
@@ -8,45 +8,17 @@ from .forms import RestrauntForm
 def restrauntform(request):
     
     form = RestrauntForm()
+    if request.method == 'POST':
+        # print('Printing POST' , request.POST)
+        form = RestrauntForm(request.POST)
+        if form.is_valid():
+            form.save()    
+            return redirect ('/')
 
     context = {'form' : form}
 
-    return render(request, 'pages/restraunt-form.html' , {'form' :form})  
+    return render(request, 'pages/restraunt-form.html' , context)  
 
-
-# def updateUser(request):
-#     user = request.user
-#     form = UserForm(instance=user)
-
-#     if request.method == 'POST':
-#         form = UserForm (request.POST ,request.FILES, instance=user) 
-#         if form.is_valid():
-#            form.save()
-#            return redirect('user-profile' , pk=user.id)
-
-#     return render (request, 'base/update-user.html' , {'form' :form} ) 
-
-
-
-
-# def create_book(request, pk):
-#     author = Author.objects.get(id=pk)
-#     books = Book.objects.filter(author=author)
-#     formset = BookFormSet(request.POST or None)
-
-#     if request.method == "POST":
-#         if formset.is_valid():
-#             formset.instance = author
-#             formset.save()
-#             return redirect("create-book", pk=author.id)
-
-#     context = {
-#         "formset": formset,
-#         "author": author,
-#         "books": books
-#     }
-
-#     return render(request, "create_book.html", context)    
 
 
 def gallery1(request):
