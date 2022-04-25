@@ -9,11 +9,12 @@ def restrauntform(request):
     
     form = RestrauntForm()
     if request.method == 'POST':
-        # print('Printing POST' , request.POST)
+        print('Printing POST' , request.POST)
         form = RestrauntForm(request.POST)
         if form.is_valid():
-            form.save()    
-            return redirect ('/')
+            form.save()  
+            return redirect ('/')  
+            
 
     context = {'form' : form}
 

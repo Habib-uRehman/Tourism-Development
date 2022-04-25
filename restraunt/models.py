@@ -1,3 +1,4 @@
+import datetime
 import numbers
 from django.db import models
 from pyexpat import model
@@ -12,13 +13,13 @@ from multiselectfield import MultiSelectField
 # Create your models here.
 
 class restraunt (models.Model):
-    # restraunt_name = models.CharField(max_length=100, null=True)
-    # establisment_date = models.DateField()
-#     commission_date = models.DateField()
-    # telex_num = models.IntegerField(null=True)
-    # telephone_num = models.IntegerField( null=True)
-#     address = models.TextField(max_length=100, null=True)
-#     telegraphic_num = models.IntegerField(null=True)
+    restraunt_name = models.CharField(max_length=100, null=True)
+    establisment_date = models.DateField(default=datetime.date.today)
+    # commission_date = models.DateField(default=datetime.date.today)
+    # telex_num = models.IntegerField(null=True , default=1)
+    # telephone_num = models.IntegerField( null=True , default=1)
+    # address = models.TextField(max_length=100, null=True , default=1)
+    # telegraphic_num = models.IntegerField(null=True , default=1)
 
 # # location
 
