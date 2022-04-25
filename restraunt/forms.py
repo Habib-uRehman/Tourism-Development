@@ -1,21 +1,16 @@
+from dataclasses import fields
 from django import forms
-from .models import Book
-from django.forms.models import inlineformset_factory
-from .models import Author
+from django.forms import ModelForm
+from django.contrib.auth.forms import UserCreationForm
+from .models import restraunt
 
-class BookForm(forms.ModelForm):
+
+class RestrauntForm(ModelForm):
     class Meta:
-        model = Book
-        fields = (
-            'title',
-            'number_of_pages'
-        )
+        model = restraunt
+        fields = '__all__'
+        
 
-BookFormSet = inlineformset_factory(
-    Author,
-    Book,
-    form=BookForm,
-    min_num=2,  # minimum number of forms that must be filled in
-    extra=1,  # number of empty forms to display
-    can_delete=False  # show a checkbox in each form to delete the row
-)        
+
+
+

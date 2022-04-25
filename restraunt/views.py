@@ -1,31 +1,47 @@
-from django.shortcuts import render
+from multiprocessing import context
+from django.shortcuts import render , redirect
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
-from .forms import BookFormSet
-from .models import Author , Book
-# Create your views here.
+from .forms import RestrauntForm
+
 
 def restrauntform(request):
-    return render(request, 'pages/restraunt-form.html')  
+    
+    form = RestrauntForm()
+    if request.method == 'POST':
+        print('Printing POST' , request.POST)
+        form = RestrauntForm(request.POST)
+        if form.is_valid():
+            form.save()  
+            return redirect ('/')  
+            
+
+    context = {'form' : form}
+
+    return render(request, 'pages/restraunt-form.html' , context)  
 
 
 
+def gallery1(request):
+    return render (request, 'pages/gallery1.html' )    
 
-def create_book(request, pk):
-    author = Author.objects.get(id=pk)
-    books = Book.objects.filter(author=author)
-    formset = BookFormSet(request.POST or None)
 
-    if request.method == "POST":
-        if formset.is_valid():
-            formset.instance = author
-            formset.save()
-            return redirect("create-book", pk=author.id)
+def gallery2(request):
+    return render (request, 'pages/gallery2.html' ) 
 
-    context = {
-        "formset": formset,
-        "author": author,
-        "books": books
-    }
 
-    return render(request, "create_book.html", context)    
+def gallery3(request):
+    return render (request, 'pages/gallery3.html' ) 
+
+
+
+def gallery4(request):
+    return render (request, 'pages/gallery4.html' ) 
+
+
+def gallery5(request):
+    return render (request, 'pages/gallery5.html' ) 
+
+
+def gallery6(request):
+    return render (request, 'pages/gallery6.html' ) 
