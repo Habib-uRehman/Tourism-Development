@@ -13,7 +13,7 @@ urlpatterns = [
 
     path('travel-agency-form/', views.travelagencyform,  name = 'travel-agency-form'),
    
-    path('hotel-form/', views.hotelform, name = 'hotel-form'),
+    
 
     path('about-us-feature/', views.aboutusfeature, name = 'about-us-feature'),
 

@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['127.0.0.1']
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'travel.apps.TravelConfig',
+    'hotel.apps.HotelConfig',
     'jet',
     'jet.dashboard',
     'django.contrib.admin',

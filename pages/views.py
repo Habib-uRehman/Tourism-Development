@@ -29,8 +29,8 @@ def restrauntform(request):
     return render(request, 'pages/restraunt-form.html')   
 
 
-def hotelform(request):
-    return render(request, 'pages/hotel-form.html') 
+# def hotelform(request):
+#     return render(request, 'pages/hotel-form.html') 
 
 
 def aboutusfeature(request):
