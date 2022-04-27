@@ -7,8 +7,8 @@ def index(request):
     return render(request, 'pages/index.html')
 
 
-def touristGuideForm(request):
-    return render(request, 'pages/touristGuide-form.html')
+# def touristGuideForm(request):
+#     return render(request, 'pages/touristGuide-form.html')
 
 # def hotelForm(request):
 #     return render(request, 'pages/hotel-form.html')
@@ -29,8 +29,8 @@ def restrauntform(request):
     return render(request, 'pages/restraunt-form.html')   
 
 
-def hotelform(request):
-    return render(request, 'pages/hotel-form.html') 
+# def hotelform(request):
+#     return render(request, 'pages/hotel-form.html') 
 
 
 def aboutusfeature(request):
