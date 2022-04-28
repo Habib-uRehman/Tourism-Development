@@ -5,6 +5,8 @@ from django.shortcuts import redirect, render
 from .forms import RestrauntForm
 
 
+
+
 def restrauntform(request):
     
     form = RestrauntForm()

@@ -35,8 +35,9 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'travel.apps.TravelConfig',
     'hotel.apps.HotelConfig',
-    'jet',
-    'jet.dashboard',
+    # 'jet',
+    # 'jet.dashboard',
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -87,7 +88,7 @@ JET_SIDE_MENU_COMPACT = False
 JET_THEMES = [
     {
         'theme': 'default', # theme folder name
-        'color': '#47bac1', # color of the theme's button in user menu
+        'color': '#000000', # color of the theme's button in user menu
         'title': 'Default' # theme title
     },
     {
@@ -118,6 +119,7 @@ JET_THEMES = [
 ]
 
 
+
 WSGI_APPLICATION = 'tourism.wsgi.application'
 
 
@@ -135,7 +137,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'tourism',
         'USER': 'postgres',
-        'PASSWORD': 'admin123',
+        'PASSWORD': 'admin',
         'HOST': 'localhost'
     }
 }
