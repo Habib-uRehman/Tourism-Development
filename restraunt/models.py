@@ -6,20 +6,20 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.forms import CharField, DateField
 from multiselectfield import MultiSelectField
-from multiselectfield import MultiSelectField
+
 
 
 
 # Create your models here.
 
 class restraunt (models.Model):
-    restraunt_name = models.CharField(max_length=100, null=True)
+    restraunt_name = models.CharField(max_length=100, null=False)
     establisment_date = models.DateField(default=datetime.date.today)
     commission_date = models.DateField(default=datetime.date.today)
-    telex_num = models.IntegerField(null=True , default=1)
-    telephone_num = models.IntegerField( null=True , default=1)
-    address = models.TextField(max_length=100, null=True , default=1)
-    telegraphic_num = models.IntegerField(null=True , default=1)
+    telex_num = models.IntegerField(null=False , default=1)
+    telephone_num = models.IntegerField( null=False , default=1)
+    address = models.TextField(max_length=100, null=False, default=1)
+    telegraphic_num = models.IntegerField(null=False, default=1)
 
 # location
 

@@ -11,4 +11,7 @@ urlpatterns = [
     path('about-us-feature/', views.aboutusfeature, name = 'about-us-feature'),
 
     path('about-us-overview/', views.aboutusoverview, name = 'about-us-overview'),
+
+    path('contactus/', views.contactus, name = 'contactus'),
+
 ]

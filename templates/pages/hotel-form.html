@@ -43,6 +43,7 @@
             <form class="form" action="" method="POST">
                 {% csrf_token %}
                 {{form.as_p}}
+                <input type="submit" name="submit">    
                 <!-- <fieldset>
                     <legend>Hotel Registertaion</legend>
                     <div class="row">
