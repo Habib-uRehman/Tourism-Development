@@ -19,4 +19,8 @@ def aboutusoverview(request):
     return render (request, 'pages/about-us-overview.html') 
 
 def contactus(request):
-    return render (request, 'pages/contactus.html')         
+    return render (request, 'pages/contactus.html')   
+
+
+def touristguideform(request):
+    return render (request, 'pages/tourist-guide-form.html')             
