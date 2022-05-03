@@ -9,4 +9,3 @@ class HotelForm(ModelForm):
     class Meta:
         model = HotelRegistration
         fields = '__all__'
-        

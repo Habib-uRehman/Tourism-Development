@@ -34,6 +34,8 @@ ALLOWED_HOSTS = ['127.0.0.1']
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'travel.apps.TravelConfig',
+    'restraunt.apps.RestrauntConfig',
+    'tourist.apps.TouristConfig',
     'hotel.apps.HotelConfig',
     # 'jet',
     # 'jet.dashboard',
@@ -44,7 +46,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'restraunt.apps.RestrauntConfig',
     'multiselectfield',
     'dynamic_models',  
 ]

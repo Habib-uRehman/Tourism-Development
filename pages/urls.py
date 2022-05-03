@@ -14,6 +14,5 @@ urlpatterns = [
 
     path('contactus/', views.contactus, name = 'contactus'),
 
-    path('tourist-guide-form/', views.touristguideform, name = 'tourist-guide-form'),
 
 ]
