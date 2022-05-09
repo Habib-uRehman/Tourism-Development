@@ -22,5 +22,7 @@ def contactus(request):
     return render (request, 'pages/contactus.html')   
 
 
-def touristguideform(request):
-    return render (request, 'pages/tourist-guide-form.html')             
+def profile(request):
+    return render (request, 'pages/profile.html')      
+
+   

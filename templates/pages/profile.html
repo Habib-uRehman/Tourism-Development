@@ -1,0 +1,418 @@
+
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+      
+
+        <!-- Main Content Start -->
+        <section class="main-content profile-section">
+            <!-- Start Hero Section -->
+            <div class="userProfile-hero hero z-index-2">
+                <div class="container">
+                    <div class="row justify-content-center main-heading d-flex align-items-center">
+                        <div class=" text-center">
+                            <div class="user">
+                                <div class="user-img">
+                                    <img src="{% static 'images/user.jpg'  %}" width="180px" style="border-radius: 100px;" alt="">
+                                </div>
+                                <h2 class="text-white"> User Name</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Hero Section -->
+            <div class="container space-y">
+                <div class="row">
+                    <div class="col-12">
+                        <nav>
+                            <div class="nav nav-tabs  justify-content-center" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-profileInfo-tab" data-bs-toggle="tab" data-bs-target="#nav-profileInfo" type="button" role="tab" aria-controls="nav-profileInfo" aria-selected="true">Profile</button>
+                                <button class="nav-link" id="nav-submittedForm-tab" data-bs-toggle="tab" data-bs-target="#nav-submittedForm" type="button" role="tab" aria-controls="nav-submittedForm" aria-selected="false">Submitted Form</button>
+                                <button class="nav-link" id="nav-pendingForm-tab" data-bs-toggle="tab" data-bs-target="#nav-pendingForm" type="button" role="tab" aria-controls="nav-pendingForm" aria-selected="false">Pending Form</button>
+                                <button class="nav-link" id="nav-approvedForm-tab" data-bs-toggle="tab" data-bs-target="#nav-approvedForm" type="button" role="tab" aria-controls="nav-approvedForm" aria-selected="false">Approved Form</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-profileInfo" role="tabpanel" aria-labelledby="nav-profileInfo-tab">
+                                <div class="row mt-5">
+                                    <div class="col-lg-2 col-md-4 col-sm-6 text-md-start text-center text-nowrap">
+                                        <h4 class="border-bottom border-3 border-info pb-4"> Profile Information </h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form action="">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-12 my-2">
+                                                    <label class="form-label">Full Name</label>
+                                                    <input type="email" placeholder="Enter Full Name" class="form-control">
+                                                </div>
+                                                <div class="col-lg-6 col-12 my-2">
+                                                    <label class="form-label">User Name</label>
+                                                    <input type="email" placeholder="Enter User Name" class="form-control">
+                                                </div>
+                                                <div class="col-lg-6 col-12 my-2">
+                                                    <label class="form-label">E-mail</label>
+                                                    <input type="email" placeholder="Enter E-mail" class="form-control">
+                                                </div>
+                                                <div class="col-lg-6 col-12 my-2">
+                                                    <label class="form-label">Passwrod</label>
+                                                    <input type="Passwrod" placeholder="Enter Passwrod" class="form-control">
+                                                </div>
+                                                <div class="col-12 text-center mt-5">
+                                                    <button class="btn text-white" type="button" style="background-color: #049DD9;">Change Settings</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-submittedForm" role="tabpanel" aria-labelledby="nav-submittedForm-tab">
+                                <div class="row mt-5">
+                                    <div class="col-lg-2 col-md-4 col-sm-6 text-md-start text-center text-nowrap">
+                                        <h5 class="border-bottom border-3 border-info pb-4"> LIST OF Submitted Form </h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 table-responsive">
+                                        <table class="table table-bordered" id="submittedForm">
+                                            <thead>
+                                                <th>
+                                                    Sr.#
+                                                </th>
+                                                <th>
+                                                    File Number
+                                                </th>
+                                                <th>Name & Adress of the Hotel</th>
+                                                <th>Actions</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>No. DTS-Q-4(631 )/2006</td>
+                                                    <td>Zever Pearl Continental Hotel, Gawadar</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>No.DTS- -4 1 /2020.</td>
+                                                    <td>Gwadar Business Centre Hotel Gwadar.</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>No. DTS-Q-4 8 /88</td>
+                                                    <td>Quetta Serena Hotel, Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Quetta Serena Hotel, uetta</td>
+                                                    <td>Gwadar Club Hotel, Restaurant and Resort, Gwadar.</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>No DTS-57(4)79</td>
+                                                    <td>New Lourds Hotel, Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>No. DTS-Q- 56 /91</td>
+                                                    <td>Bloom Star Hotel, Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>No. DTS-Q-4( 109)93</td>
+                                                    <td>Qasre Naz Hotel, Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>No. DTS- -4 202 /95</td>
+                                                    <td>Metro Hotel Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-pendingForm" role="tabpanel" aria-labelledby="nav-pendingForm-tab">
+                                <div class="row mt-5">
+                                    <div class="col-lg-2 col-md-4 col-sm-6 text-md-start text-center text-nowrap">
+                                        <h5 class="border-bottom border-3 border-info pb-4"> LIST OF Pending Form </h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 table-responsive">
+                                        <table class="table table-bordered" id="pendingForm">
+                                            <thead>
+                                                <th>
+                                                    Sr.#
+                                                </th>
+                                                <th>
+                                                    File Number
+                                                </th>
+                                                <th>Name & Adress of the Hotel</th>
+                                                <th>Actions</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>No. DTS-Q-4(631 )/2006</td>
+                                                    <td>Zever Pearl Continental Hotel, Gawadar</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>No.DTS- -4 1 /2020.</td>
+                                                    <td>Gwadar Business Centre Hotel Gwadar.</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>No. DTS-Q-4 8 /88</td>
+                                                    <td>Quetta Serena Hotel, Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Quetta Serena Hotel, uetta</td>
+                                                    <td>Gwadar Club Hotel, Restaurant and Resort, Gwadar.</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>No DTS-57(4)79</td>
+                                                    <td>New Lourds Hotel, Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>No. DTS-Q- 56 /91</td>
+                                                    <td>Bloom Star Hotel, Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>No. DTS-Q-4( 109)93</td>
+                                                    <td>Qasre Naz Hotel, Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>No. DTS- -4 202 /95</td>
+                                                    <td>Metro Hotel Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-approvedForm" role="tabpanel" aria-labelledby="nav-approvedForm-tab">
+                                <div class="row mt-5">
+                                    <div class="col-lg-2 col-md-4 col-sm-6 text-md-start text-center text-nowrap">
+                                        <h5 class="border-bottom border-3 border-info pb-4"> LIST OF Approved Form </h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 table-responsive">
+                                        <table class="table table-bordered" id="approvedForm">
+                                            <thead>
+                                                <th>
+                                                    Sr.#
+                                                </th>
+                                                <th>
+                                                    File Number
+                                                </th>
+                                                <th>Name & Adress of the Hotel</th>
+                                                <th>Actions</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>No. DTS-Q-4(631 )/2006</td>
+                                                    <td>Zever Pearl Continental Hotel, Gawadar</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>No.DTS- -4 1 /2020.</td>
+                                                    <td>Gwadar Business Centre Hotel Gwadar.</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>No. DTS-Q-4 8 /88</td>
+                                                    <td>Quetta Serena Hotel, Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Quetta Serena Hotel, uetta</td>
+                                                    <td>Gwadar Club Hotel, Restaurant and Resort, Gwadar.</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>No DTS-57(4)79</td>
+                                                    <td>New Lourds Hotel, Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>No. DTS-Q- 56 /91</td>
+                                                    <td>Bloom Star Hotel, Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>No. DTS-Q-4( 109)93</td>
+                                                    <td>Qasre Naz Hotel, Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>No. DTS- -4 202 /95</td>
+                                                    <td>Metro Hotel Quetta</td>
+                                                    <td class="action-icons">
+                                                        <a href="#"><i class="far fa-edit text-warning"></i></a>
+                                                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                                                        <a href="#"><i class="far fa-eye text-success"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Main Content End -->
+
+  
+
+    <script src="assets/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script/jquery.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="assets/script/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#submittedForm').DataTable();
+        });
+        $(document).ready(function() {
+            $('#pendingForm').DataTable();
+        });
+        $(document).ready(function() {
+            $('#approvedForm').DataTable();
+        });
+    </script>
+{% endblock content%}

@@ -14,5 +14,7 @@ urlpatterns = [
 
     path('contactus/', views.contactus, name = 'contactus'),
 
+    path('profile/', views.profile, name = 'profile'),
+
 
 ]
