@@ -11,6 +11,9 @@ from multiselectfield import MultiSelectField
 
 # Create your models here.
 
+class furniture_dining(models.Model):
+    furniture_type = models.CharField(max_length=100 , null=True)
+
 class restraunt (models.Model):
     restraunt_name = models.CharField(max_length=100, null=False)
     establisment_date = models.DateField(default=datetime.date.today)
@@ -157,11 +160,7 @@ class restraunt (models.Model):
 
 
 
-   
 
-
-class furniture_dining(models.Model):
-    furniture_type = models.CharField(max_length=100 , null=True)
 
 
 class furniture_kitchen(models.Model):
