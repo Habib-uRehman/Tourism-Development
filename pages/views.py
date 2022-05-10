@@ -25,4 +25,7 @@ def contactus(request):
 def profile(request):
     return render (request, 'pages/profile.html')      
 
-   
+
+
+def test(request):
+    return render (request, 'pages/test.html')         

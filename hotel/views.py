@@ -20,3 +20,5 @@ def hotelform(request):
 
     return render(request, 'pages/hotel-form.html' , context)
       
+
+      

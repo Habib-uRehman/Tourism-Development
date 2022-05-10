@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+
+
+{% load static %}
+
+{% block content %}
+
+<style>
+    .container{
+        height: 500px;
+        text-align: center;
+        padding: 100px;
+    }
+</style>
+
+<div class="container">
+
+<h1>hello to test htmx</h1>
+
+<div hx-get="/messages"
+    hx-trigger="load delay:1s"
+    hx-swap="outerHTML"
+>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock content %}
