@@ -17,11 +17,13 @@
 
 <h1>hello to test htmx</h1>
 
-<div hx-get="/messages"
-    hx-trigger="load delay:1s"
-    hx-swap="outerHTML"
->
-</div>
+<form hx-post="/store">
+    <input id="title" name="title" type="text" 
+        hx-post="/validate" 
+        hx-trigger="change"
+    >
+    <button type="submit">Submit</button>
+</form>
 
 </div>
 

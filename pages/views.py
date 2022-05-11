@@ -1,7 +1,8 @@
 import imp
 from django.shortcuts import render
-
 from django.http import HttpResponse
+from .forms import BookForm
+
 
 def index(request):
     return render(request, 'pages/index.html')
@@ -29,3 +30,11 @@ def profile(request):
 
 def test(request):
     return render (request, 'pages/test.html')         
+
+
+def create_book_form(request):
+    form = BookForm()
+    context = {
+        "form": form
+    }
+    return render(request, "partials/book_form.html", context)    

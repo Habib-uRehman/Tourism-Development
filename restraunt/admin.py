@@ -9,12 +9,3 @@ admin.site.register(furniture_dining)
 admin.site.register(furniture_kitchen)
 
 
-# class BookInLineAdmin(admin.TabularInline):
-#     model = Book
-
-
-# class AuthorAdmin(admin.ModelAdmin):
-#     inlines = [BookInLineAdmin]
-
-
-# admin.site.register(Author, AuthorAdmin)

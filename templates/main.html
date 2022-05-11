@@ -25,11 +25,12 @@
         <link rel="stylesheet" href="{% static 'style/style.css' %}">
         <!-- Font Awesome icons -->
         <script src="https://kit.fontawesome.com/f14330b5d4.js" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/htmx.org@1.7.0"
-            integrity="sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo" crossorigin="anonymous"
-            defer></script>
+        
+        <script src="https://unpkg.com/htmx.org@1.5.0"
+        integrity="sha384-oGA+prIp5Vchu6we2YkI51UtVzN9Jpx2Z7PnR1I78PnZlN8LkrCT4lqqqmDkyrvI"
+        crossorigin="anonymous"></script>
 
-        <script src="https://unpkg.com/htmx.org@1.7.0" integrity="sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo" crossorigin="anonymous" defer></script>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
         <!-- hero slider CSS -->
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -483,6 +484,7 @@
                     event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
                 })
             </script>
+
 
 
     </body>
