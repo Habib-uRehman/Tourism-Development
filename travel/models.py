@@ -31,7 +31,7 @@ class travelagency(models.Model):
     nature_of_firm = models.CharField(max_length=200, choices=FRIMS_CHOICES, default='private company')
 
     year_of_establishment = models.DateField(default=datetime.date.today)
-    # registration_copy = models.FileField(default=NULL)
+    registration_copy = models.FileField(default=NULL, upload_to='documents/%Y/%m/%d')
 
     contact_number = models.IntegerField(default=0)
     cable_address = models.CharField(max_length=200, default=NULL)
@@ -42,11 +42,11 @@ class travelagency(models.Model):
     branch_address = models.CharField(max_length=200, default=NULL)
 
     investment = models.IntegerField(default=0)
-    # investment_copy = models.FileField(default=NULL)
+    investment_copy = models.FileField(default=NULL,upload_to='documents/%Y/%m/%d')
 
 #     # Bank Details
     banker_name = models.CharField(max_length=200, default=NULL)
-    # reference_letter_copy = models.FileField(default=NULL)
+    reference_letter_copy = models.FileField(default=NULL,upload_to='documents/%Y/%m/%d')
 
     auditor_name = models.CharField(max_length=30, default=NULL)
     auditor_number = models.IntegerField(default=0)
@@ -67,7 +67,7 @@ class travelagency(models.Model):
 
     #Foreign Parnterships
     no_of_foreign_partnerships = models.IntegerField(blank=True, default=0)
-    # partnership_file = models.FileField(default=NULL)
+    partnership_file = models.FileField(default=NULL)
 
     # Foreign Exchange Dealing
     foreign_dealing = models.BooleanField(default=False)
@@ -75,15 +75,15 @@ class travelagency(models.Model):
     exchange_licence_number = models.IntegerField(blank=True, default=0)
     issue_date = models.DateField(blank=True, default=datetime.date.today)
     exchange_address = models.CharField(max_length=200, default=NULL)
-    # license_copy = models.FileField(blank=True)
-    # exchange_statment = models.FileField(blank=True)
+    license_copy = models.FileField(blank=True,upload_to='documents/%Y/%m/%d')
+    exchange_statment = models.FileField(blank=True,upload_to='documents/%Y/%m/%d')
 
 
     # Conviction of offence
     conviction_details = models.CharField(max_length=500,blank=True)
 
     #Business Plan 
-    # business_plan_copy = models.FileField(default=NULL)
+    business_plan_copy = models.FileField(default=NULL,upload_to='documents/%Y/%m/%d')
 
 
     def __str__(self):
