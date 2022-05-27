@@ -33,13 +33,6 @@ def test(request):
 
 
 
-
-
-def logout(request):
-    return render (request, 'accounts/logout.html') 
-
-
-
 def signup(request):
     return render (request, 'accounts/signup.html') 
 
