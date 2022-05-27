@@ -75,14 +75,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="logo-section">
-                    <div class="contianer-fluid sub-header p-0 d-md-flex d-none">
+                <div class="logo-section" >
+                    <div class="contianer-fluid sub-header p-0 d-lg-flex  d-none">
                         <a href="{% url 'index' %}" class="brand-logo">
                             <img src="{% static 'images/logo.png' %}" alt="">
                         </a>
                     </div>
                 </div>
-                <div class="brand-and-icon d-md-none d-block d-flex">
+                <div class="brand-and-icon d-md-block d-lg-none d-block d-flex">
                     <a href="{% url 'index' %}" class="navbar-brand">
                         <!-- Tourism -->
                         <img src="{% static 'images/logo.png' %}"  alt="">
@@ -238,7 +238,10 @@
                                         <li class="list-inline-item">
                                             <a href="{% url 'contactus' %}">Contact Us</a>
                                         </li>
-                                        <li class="list-inline-item d-none">
+                                      
+
+
+                                        <li class="list-inline-item">
                                             <a class="menu-link d-flex justify-content-md-between justify-content-center align-items-center">
     
                                                 <!-- <div class="user-heading me-2 text-start">
@@ -247,7 +250,7 @@
     
                                                 </div> -->
                                                 <div class="User-avtar">
-                                                    <img src="{% static  'images/cm.png' %}" />
+                                                    <img src="{% static  'images/cm.png' %}" width="100%" height="100%" />
                                                 </div>
                                             </a>
                                             <div class="sub-menu" style="right: 10px;">
@@ -263,12 +266,8 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li>
-                                            <a href="{% url 'index' %}" class="btn btn-sm btn-danger d-block">Sign In</a>
-                                        </li>
-                                        <!-- <li class="list-inline-item">
-                                            <a href="{% url 'profile' %}">Profile</a>
-                                        </li> -->
+
+     
                                     </ul>
                                 </div>
                             </nav>
