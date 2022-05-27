@@ -29,7 +29,24 @@ def profile(request):
 
 
 def test(request):
-    return render (request, 'pages/test.html')         
+    return render (request, 'pages/test.html')  
+
+
+
+
+
+def logout(request):
+    return render (request, 'accounts/logout.html') 
+
+
+
+def signup(request):
+    return render (request, 'accounts/signup.html') 
+
+
+
+def signin(request):
+    return render (request, 'accounts/signin.html')                    
 
 
 def create_book_form(request):
