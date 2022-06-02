@@ -202,11 +202,9 @@
             }
 
             .navbar-nav>li>a {
-                text-transform: uppercase;
-                font-size: 1.1rem;
-                font-weight: 600;
+                
                 display: block;
-                padding: 1rem 0;
+                padding: rem 0;
                 margin: 0.2rem 0;
                 border-bottom: 1px solid #ddd;
                 border-radius: 1px;

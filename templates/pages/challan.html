@@ -1,0 +1,139 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+    <section class="main-section m-5"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h5>
+                        Provincial
+                    </h5>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-end">
+                <div class="col-3 col-offset-9">
+                    <div class="form-group d-flex justify-content-between text-nowrap align-items-center my-2">
+                        <label for="" class="form-label">DDO Code</label>
+                        <input type="text" class="form-control custom-input-ddo">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 text-start">
+                    <h6>SEE S.T.R 27 and 220</h6>
+                    <h4>Chllan No.</h4>
+                </div>
+                <div class="col-4 text-center">
+                    <h4>Form No. 32-A</h4>
+                    <h6>Chllan of Cash Paid into the</h6>
+                </div>
+                <div class="col-4 text-start">
+
+                    <p>
+                        <b>
+                            Treasury/Sub - Treasury State Bank of Pakistan National Bank Of Pakistan
+                        </b>
+                    </p>
+
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-12">
+                    <table class="table table-bordered border-3 border-dark w-100 text-center">
+                        <tbody>
+                            <tr>
+                                <th class="custom-cell" rowspan="2" width="15%"> By Whom Tendered</th>
+                                <th class="custom-cell" colspan="2" width="45%">To be filled in by the Remitter</th>
+                                <th class="custom-cell" rowspan="2" width="15%">Amount</th>
+                                <th class="custom-cell" colspan="2" width="25%">To be filled in by the Departmental Officer or Treasury </th>
+                            </tr>
+
+                            <tr>
+                                <th class="custom-cell" width="20%">Name (or Designation and address or the person on whose behalf money is paid)</th>
+                                <th class="custom-cell" width="20%">Full Particulars of the Remittance and of authority (if any)</th>
+                                <th class="custom-cell" width="10%">Head of Account</th>
+                                <th class="custom-cell" width="50%">Ordered to the Bank</th>
+                            </tr>
+                            <tr height="200px">
+                                <td rowspan="2" contenteditable="true"></td>
+                                <td rowspan="2" contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true" class="allownumeric" id="number">
+                                </td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="false" class="text-start">
+                                    Date
+                                    <br> Correct, receive and grat Receipt
+                                    <br> <br> Signature and full Designation of the officer ordering the money to paid in.
+
+                                </td>
+                            </tr>
+                            <tr height="60px">
+                                <th>Total</th>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <h6>Signature</h6>
+                    <div class="form-group d-flex justify-content-between text-nowrap align-items-center my-2">
+                        <label for="" class="form-label">(In Words) Ruppes</label>
+                        <!-- <input type="text" class="form-control custom-input"> -->
+                        <span class="custom-input " id="words"></span>
+                    </div>
+                    <div class="form-group d-flex justify-content-between text-nowrap align-items-center my-2">
+                        <label for="" class="form-label">Received Payment Date</label>
+                        <input type="text" class="form-control custom-input">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h6>To Be Used Only In the Case Of Remeittance To Bank Through An Officer Of The Government</h6>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center mt-5">
+                <div class="col-6 text-start">
+                    <span class="border-top border-2 border-dark">Treasure Accountant</span>
+                </div>
+
+
+                <div class="col-6 d-flex justify-content-end">
+                    <div class="text-center">
+                        <span>Treasure Officer</span>
+                        <br>
+                        <span class="border-top border-2 border-dark">Treasure Accountant</span>
+                    </div>
+                </div>
+                <div>
+                   <a title="Print Screen" alt="Print Screen" onclick="window.print();" target="_blank" style="cursor:pointer;"><button type="button" class="btn btn-danger">Print</button></a> 
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(".allownumeric").on("keypress keyup blur", function(event) {
+            $(this).val($(this).val().replace(/[^\d].+/, ""));
+            if ((event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+        });
+    </script>
+
+{% endblock content %}

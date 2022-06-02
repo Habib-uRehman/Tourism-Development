@@ -14,6 +14,8 @@ def forms(request):
 def aboutusfeature(request):
     return render (request, 'pages/about-us-feature.html')      
 
+def challan(request):
+    return render (request, 'pages/challan.html')      
 
 
 def aboutusoverview(request):
