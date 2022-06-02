@@ -6,7 +6,7 @@
 
 
 
-    <section class="main-section m-5"  >
+    <section class="main-section m-5" id="print"  >
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -115,7 +115,7 @@
                     </div>
                 </div>
                 <div>
-                   <a title="Print Screen" alt="Print Screen" onclick="window.print();" target="_blank" style="cursor:pointer;"><button type="button" class="btn btn-danger">Print</button></a> 
+                   <a  title="Print Screen" alt="Print Screen" onclick="myfun('print')" target="_blank" ><button type="button" class="btn btn-danger">Print</button></a> 
                 </div>
             
             </div>
@@ -135,5 +135,16 @@
             }
         });
     </script>
+
+    <script>
+        function myfun(paravalue){
+            var backup = document.body.innerHTML;
+            var divconent = document.getElementById(paravalue).innerHTML;
+            document.body.innerHTML = divconent;
+            window.print();
+        }
+    </script>
+
+  
 
 {% endblock content %}

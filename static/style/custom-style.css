@@ -362,6 +362,7 @@
 
             .collapse-menu .navbar a {
                 color: var(--primary-color);
+                padding: 12px;
             }
 
             .collapse-menu .navbar-toggler {
@@ -416,6 +417,13 @@
                     margin: 0 0.4rem;
                     padding: 1rem 1rem 1rem 1rem;
                     font-size: 0.8rem;
+                }
+
+                .navbar-nav>li{
+                    height: 75px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;                    
                 }
 
                 .sub-menu {
