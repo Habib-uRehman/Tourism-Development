@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from .models import touristguideform, auditors, staff
+from .models import touristguideform
 
 admin.site.register(touristguideform)
-admin.site.register(auditors)
-admin.site.register(staff)
+# admin.site.register(auditors)
+# admin.site.register(staff)
 

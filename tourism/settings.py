@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'restraunt.apps.RestrauntConfig',
     'tourist.apps.TouristConfig',
     'hotel.apps.HotelConfig',
+    'widget_tweaks',
     # 'jet',
     # 'jet.dashboard',
     'jazzmin',
