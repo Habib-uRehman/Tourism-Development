@@ -170,18 +170,21 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-6 d-flex justify-content-center">
                         <div class="form form-signin">
-                            <form action="#">
+                            <!-- Alerts -->
+                            {% include 'alerts.html' %}
+                            <form action="#" method="post">
+                                {% csrf_token %}
                                 <div class="row">
                                     <div class="col-12">
                                         <h4 class="text-center text-white">User Sign In</h4>
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label">User Name</label>
-                                        <input type="text" placeholder="Enter User Name" class="form-control">
+                                        <input type="text" name="username" placeholder="Enter User Name" class="form-control">
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label">Passwrod</label>
-                                        <input type="Passwrod" placeholder="Enter Passwrod" class="form-control">
+                                        <input type="Password" name="password" placeholder="Enter Password" class="form-control">
                                     </div>
 
                                     <div class="col-12 d-flex justify-content-between mb-2 align-items-center">

@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     'restraunt.apps.RestrauntConfig',
     'tourist.apps.TouristConfig',
     'hotel.apps.HotelConfig',
+<<<<<<< HEAD
+    'accounts.apps.AccountsConfig',
+
+=======
     'widget_tweaks',
+>>>>>>> 0d09563ad2030c7e2a5bfa66067a97de4d00dbd2
     # 'jet',
     # 'jet.dashboard',
     'jazzmin',
@@ -139,7 +144,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'tourism',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'PASSWORD': 'Dearlala2@',
         'HOST': 'localhost'
     }
 }
@@ -193,4 +198,13 @@ MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
+
+# Messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS ={
+    messages.ERROR: 'danger',
+}
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+

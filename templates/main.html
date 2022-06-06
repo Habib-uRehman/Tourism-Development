@@ -28,6 +28,8 @@
     <body>
         <!-- Main Wrapper Start -->
         <div class="wrapper">
+            
+            {% include 'alerts.html' %}
 
             <!-- Header Start -->
             <header class="main-header">
@@ -260,16 +262,19 @@
                                             <div class="sub-menu">
                                                 <!-- items -->
                                                 <ul class="p-0 text-start">
+                                                    {% if user.is_authenticated %}
                                                     <li>
-                                                        <a href="{% url 'profile' %}"> <i class="fas fa-user text-success"></i> &nbsp; My Profile</a>
+                                                        <a href="{% url 'profile' %}"> <i class="fas fa-user text-success"></i> &nbsp; My Profiles</a>
                                                     </li>
+                                                    <li><a href="#"><i class="fas fa-cog text-warning"></i> &nbsp; Settings</a></li>
+                                                    <li><a href="{% url 'signout' %}"><i class="fas fa-power-off text-danger"></i> &nbsp; Logout</a></li>
+                                                    {% else %}
                                                     <!-- <li><a href="#">Notifications</a></li> -->
                                                     <!-- <li><a href="#">Projects</a></li> -->
-                                                    <li><a href="#"><i class="fas fa-cog text-warning"></i> &nbsp; Settings</a></li>
+                                           
                                                     <li><a href="{% url 'signup' %}"><i class="fas fa-user text-primary"></i> &nbsp; Signup</a></li>
                                                     <li><a href="{% url 'signin' %}"><i class="fas fa-power-off text-success"></i> &nbsp; Login</a></li>
-                                                    <li><a href="{% url 'index' %}"><i class="fas fa-power-off text-danger"></i> &nbsp; Logout</a></li>
-                                                    
+                                                    {% endif %}
                                                 </ul>
                                             </div>
                                         </li>
