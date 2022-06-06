@@ -29,7 +29,7 @@
     <!-- Main Wrapper Start -->
     <div class="wrapper">
 
-        {% include 'alerts.html' %}
+     
 
         <!-- Header Start -->
         <header class="main-header">
@@ -270,9 +270,6 @@
                                                 </li>
                                                 <li><a href="#"><i class="fas fa-cog text-warning"></i> &nbsp;
                                                         Settings</a></li>
-                                                <li><a href="{% url 'signout' %}"><i
-                                                            class="fas fa-power-off text-danger"></i> &nbsp; Logout</a>
-                                                </li>
                                                 <li>
                                                     <form action="{% url 'signout' %}" method="POST">
                                                         {% csrf_token %}
