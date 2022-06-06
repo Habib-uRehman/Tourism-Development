@@ -8,5 +8,5 @@ from .models import touristguideform
 class Touristguideform(forms.ModelForm):
     class Meta:
         model = touristguideform
-        # fields = '__all__'
-        fields = ('guide_name' , 'business_address' )
+        fields = '__all__'
+        # fields = ('guide_name' , 'business_address' )

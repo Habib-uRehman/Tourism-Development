@@ -38,7 +38,7 @@
                         <div class="col-12 my-4">
                             <label for="" class="form-label" class="form-label">Name Of The Person</label>
                             
-                            {% render_field form.guide_name class="form-control" %}
+                            {% render_field form.guide_name type="text" class="form-control" %}
                         </div>
                         <div class="form-row row">
                             <div class="col-12">
@@ -51,14 +51,14 @@
                             <div class="col-md-8  my-2">
                                 <label for="" class="form-label">Business Address</label>
                                 
-                                {% render_field form.business_address class="form-control" %}
+                                {% render_field form.business_address type="text" class="form-control" %}
                                 <small>(if Registered, give registered
                                     address). </small>
                             </div>
-                            <input type="submit" name="submit">
+                            
                             <div class="col-md-4 my-2">
                                 <label for="" class="form-label">Residential Address </label>
-                                <input type="text" class="form-control " id="" value="">
+                                 {% render_field form.residential_address type="text" class="form-control" %}
                             </div>
                         </div>
 
@@ -70,21 +70,20 @@
                             </h5>
                             <div class=" col-md-4   my-2">
                                 <label for="" class="form-label">Year of establisment</label>
-                                <input type="date" class="form-control" id="" placeholder="">
+                                {% render_field  form.year_of_establishment type="date" class="form-control" %}
+                                
                             </div>
                             <div class="col-md-4  my-2">
-                                <label for="" class="form-label">Telephone Number</label>
-                                <input type="number" class="form-control" id="" placeholder="">
-
+                                <label for="" class="form-label">Telephone Number</label>                         
+                                {% render_field form.telephone_number type="number" class="form-control" %}
                             </div>
                             <div class="col-md-4  my-2">
                                 <label for="" class="form-label">Telephone Number (Resedential)</label>
-                                <input type="number" class="form-control" id="" placeholder="">
-
+                                {% render_field form.residential_number type="number" class="form-control" %}
                             </div>
                             <div class="col-md-12 my-2">
                                 <label for="" class="form-label">Telegraphic/Telex/Cable Address.</label>
-                                <input type="text" class="form-control" id="" placeholder="">
+                                {% render_field form.telegraphic_address type="number" class="form-control" %}
                             </div>
 
                         </div>
@@ -92,16 +91,16 @@
                         <div class="form-row row">
                          
                             <div class="col-lg-4 col-md-6 my-2">
-                                <label for="" class="form-label">Educational Qualifications</label>
-                                <input type="text" class="form-control" id="" placeholder="">
+                                <label for="" class="form-label">Educational Qualifications</label> 
+                                {% render_field form.educational_qualifications type="text" class="form-control" %}
                             </div>
                             <div class="col-lg-4 col-md-6 my-2">
-                                <label for="" class="form-label">Experience as Tourist Guide</label>
-                                <input type="text" class="form-control" id="" placeholder="">
+                                <label for=""  class="form-label">Year of Experience as Tourist Guide</label>
+                                {% render_field form.year_of_experiance type="number" class="form-control" %}
                             </div>
                             <div class="col-lg-4 col-md-6 my-2">
-                                <label for="" class="form-label">Knowledge of Foreign Languages</label>
-                                <input type="text" class="form-control" id="" placeholder="">
+                                <label for="" class="form-label">Number of Foreign Languages</label>     
+                                {% render_field form.number_of_languages type="number" class="form-control" %}
                             </div>
 
                             <div class="col-md-12  my-2">
@@ -297,15 +296,51 @@
                             </div>
 
                             <div class="col-12 my-4 pt-4 text-end">
-                                <button class="btn btn-success btn-lg">Submit</button>
+                                <input type="submit" name="submit" class="btn btn-success btn-lg">
                                 <button class="btn btn-danger btn-lg">Reset</button>
                             </div>
 
-                    </fieldset> -->
+                    </fieldset>
                 </form>
                 </div>
             </div>
     </section>
+
+
+     <!-- Modal -->
+     <div class="modal" id="trainingModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Training Details</h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 my-2">
+                            <label for="" class="form-label">Training Institute Name</label>
+                            <input type="text" class="form-control " id="" value="">
+                        </div>
+                        <div class="col-md-6 my-2">
+                            <label for="" class="form-label">Start Date</label>
+                            <input type="date" class="form-control " id="" value="">
+                        </div>
+                        <div class="col-md-6 my-2">
+                            <label for="" class="form-label">End Date</label>
+                            <input type="date" class="form-control " id="" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Main Content End -->
 
 
