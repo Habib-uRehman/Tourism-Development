@@ -267,7 +267,15 @@
                                                         <a href="{% url 'profile' %}"> <i class="fas fa-user text-success"></i> &nbsp; My Profiles</a>
                                                     </li>
                                                     <li><a href="#"><i class="fas fa-cog text-warning"></i> &nbsp; Settings</a></li>
-                                                    <li><a href="{% url 'index' %}"><i class="fas fa-power-off text-danger"></i> &nbsp; Logout</a></li>
+                                                    <li>
+                                                        <form action="{% url 'signout' %}" method="POST">
+                                                            {% csrf_token %}
+                                                            <i class="fas fa-power-off text-danger"></i> &nbsp;<a href="{% url 'signout' %}">Logout</a> </li>
+
+
+                                                        </form>
+
+                                                    <!-- <i class="fas fa-power-off text-danger"></i> &nbsp; Logout</a></li> -->
                                                     {% else %}
                                                     <!-- <li><a href="#">Notifications</a></li> -->
                                                     <!-- <li><a href="#">Projects</a></li> -->

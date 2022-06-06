@@ -66,10 +66,15 @@ def signup(request):
     
 
 def signout(request):
-    # auth.logout(request)  # logout is predefined
-    # return redirect('index')
+     # logout is predefined
+    #  if request.method == 'POST':
+    #     print("asdfkj")
+    #     logout(request)
+    logout(request)
+    return redirect('index')
     # logout(request)
     # messages.success(request, "Logged out successfully!")
-    # return redirect("index")
-    auth.logout(request)
-    return render(request,'index.html')
+    # print("triggered")
+    # return redirect(auth.logout(request))
+    # auth.logout(request)
+    # return render(request,'index.html')
