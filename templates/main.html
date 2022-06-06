@@ -259,7 +259,7 @@
                                                     <img src="{% static  'images/cm.png' %}" width="100%" height="100%" />
                                                 </div>
                                             </a>
-                                            <div class="sub-menu" style="right: 10px;">
+                                            <div class="sub-menu">
                                                 <!-- items -->
                                                 <ul class="p-0 text-start">
                                                     {% if user.is_authenticated %}
@@ -267,7 +267,7 @@
                                                         <a href="{% url 'profile' %}"> <i class="fas fa-user text-success"></i> &nbsp; My Profiles</a>
                                                     </li>
                                                     <li><a href="#"><i class="fas fa-cog text-warning"></i> &nbsp; Settings</a></li>
-                                                    <li><a href="{% url 'signout' %}"><i class="fas fa-power-off text-danger"></i> &nbsp; Logout</a></li>
+                                                    <li><a href="{% url 'index' %}"><i class="fas fa-power-off text-danger"></i> &nbsp; Logout</a></li>
                                                     {% else %}
                                                     <!-- <li><a href="#">Notifications</a></li> -->
                                                     <!-- <li><a href="#">Projects</a></li> -->
