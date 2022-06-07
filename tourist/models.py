@@ -18,11 +18,14 @@ class touristguideform(models.Model):
     educational_qualifications = models.CharField(max_length=30 , null=True)
     year_of_experiance = models.IntegerField(null=True)
     number_of_languages = models.IntegerField(null=True)
-    training = models.BooleanField()
+    no_training = models.BooleanField(default=False)
+    training_Institute_Name = models.CharField(max_length=30 , null=True)
+    start_Date = models.DateField(default=datetime.date.today)
+    end_Date = models.DateField(default=datetime.date.today)
     bank_name = models.CharField(max_length=30 , null=True)
-    # reference_letter = models.FileField(default=123)
+    reference_letter = models.FileField(default=123)
     capital_invested = models.IntegerField(null=True)
-    # capital_investment_statement = models.FileField(default=123)
+    capital_investment_statement = models.FileField(default=123)
 
     EXTRA = (
     ('Whether any other activities are proposed to be undertaken? If so, in what fields?','Whether any other activities are proposed to be undertaken? If so, in what fields?'),
