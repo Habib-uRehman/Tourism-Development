@@ -1,5 +1,6 @@
 {% load static %}
 
+{% load widget_tweaks %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -265,8 +266,7 @@
                                             <ul class="p-0 text-start">
                                                 {% if user.is_authenticated %}
                                                 <li>
-                                                    <a href="{% url 'profile' %}"> <i
-                                                            class="fas fa-user text-success"></i> &nbsp; My Profiles</a>
+                                                    <a href="{% url 'profile' %}"> <i class="fas fa-user text-success"></i> &nbsp; My Profiles</a>
                                                 </li>
                                                 <li><a href="#"><i class="fas fa-cog text-warning"></i> &nbsp;
                                                         Settings</a></li>
