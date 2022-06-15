@@ -6,10 +6,6 @@ from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 
 
-
-
-
-
 def tourist(request):
     
     form = Touristguideform()
