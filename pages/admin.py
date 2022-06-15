@@ -1,13 +1,8 @@
 from django.contrib import admin
-from .models import Author, Book
+from . models import myuploadfile
 
 
-class BookInLineAdmin(admin.TabularInline):
-    model = Book
 
+admin.site.register(myuploadfile)
+# Register your models here.
 
-class AuthorAdmin(admin.ModelAdmin):
-    inlines = [BookInLineAdmin]
-
-
-admin.site.register(Author, AuthorAdmin)

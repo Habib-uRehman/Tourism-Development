@@ -1,7 +1,9 @@
 import imp
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from django.http import HttpResponse
-from .forms import BookForm
+
+from . models import myuploadfile
+
 
 
 def index(request):
@@ -31,16 +33,21 @@ def profile(request):
 
 
 def test(request):
-    return render (request, 'pages/test.html')  
+    context = {
+        "data":myuploadfile.objects.all(),
+    }
+    return render(request,"pages/test.html",context)
 
 
+def send_files(request):
+    if request.method == "POST" :
+        name = request.POST.get("filename")
+        myfile = request.FILES.getlist("uploadfoles")
+        
+        for f in myfile:
+            myuploadfile(f_name=name,myfiles=f).save()
+        
+        return redirect("fileapp:index")
 
                 
 
-
-def create_book_form(request):
-    form = BookForm()
-    context = {
-        "form": form
-    }
-    return render(request, "partials/book_form.html", context)    

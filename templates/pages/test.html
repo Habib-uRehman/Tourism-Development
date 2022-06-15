@@ -1,46 +1,24 @@
-{% extends 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'fileapp:uploads' %}" method="POST" enctype="multipart/form-data">
+        <input type="text" name="filename"  placeholder="enter your file name" >
+        <input type="file" multiple name="uploadfoles" >
+        {% csrf_token %}
+        <button type="submit">File Upload</button>
+    </form>
 
-
-{% load static %}
-
-{% block content %}
-
-<style>
-    .container{
-        height: 500px;
-        text-align: center;
-        padding: 100px;
-    }
-</style>
-
-<div class="container">
-
-<h1>hello to test htmx</h1>
-
-<form hx-post="/store">
-    <input id="title" name="title" type="text" 
-        hx-post="/validate" 
-        hx-trigger="change"
-    >
-    <button type="submit">Submit</button>
-    <input type="text" name="q"
-    hx-get="/trigger_delay"
-    hx-trigger="keyup delay:500ms changed"
-    hx-target="#search-results"
-    placeholder="Search..."
->
-<div id="search-results"></div>
-</form>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-{% endblock content %}
+    {% for d in data %}
+    
+   <p> {{d.f_name}} ---- <img width="50" src="{{d.myfiles.url}}"></p>
+    
+    {% endfor %}
+    
+</body>
+</html>
