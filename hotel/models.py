@@ -7,6 +7,49 @@ from django.forms import CharField, DateField
 from multiselectfield import MultiSelectField
 
 
+# Owner Class
+class HotelOwner(models.Model):
+    owner_name = models.CharField(max_length=30, null=True)
+    owner_ratio = models.CharField(max_length=30, null=True)
+    owner_full_address = models.CharField(max_length=200, null=True)
+    owner_telegraphic_address = models.CharField(max_length=200, null=True)
+    owner_telephone = models.CharField(max_length=15, null=True)
+
+    def __str__(self):
+        return self.owner_name
+
+# Hotel Manager Class
+class HotelManager(models.Model):
+    manager_name = models.CharField(max_length=30, null=True)
+    manager_ratio = models.CharField(max_length=30, null=True)
+    manager_full_address = models.CharField(max_length=200, null=True)
+    manager_telegraphic_address = models.CharField(max_length=200, null=True)
+    manager_telephone = models.CharField(max_length=15, null=True)
+
+    def __str__(self):
+        return self.manager_name
+
+# Common Places Class
+class CommonBathroom(models.Model):
+    bathroom_no = models.CharField(max_length=10, null=True, blank=True) # Common Bathroom no
+    bathroom_floor = models.CharField(max_length=20, null=True, blank=True) # Common Floor No
+    
+    # common_place_id = models.ForeignKey(HotelRegistration, on_delete=models.CASCADE) # common place foreign key attach to hotel registration
+class CommonToilet(models.Model):
+    toilet_no = models.CharField(max_length=10, null=True, blank=True) #Common Toilet No
+    toilet_floor = models.CharField(max_length=20, null=True, blank=True) # Floor No
+# Furniture and Fixtures
+class Bedrooms(models.Model):
+    bedrooms_type = models.CharField(max_length=100 , null=True) # Bedrooms
+    rooms_type = models.CharField(max_length=100, null=True) # Common Rooms
+    corridors_type = models.CharField(max_length=100, null=True) # Corridors and Galleries
+    attached_bathroom_type = models.CharField(max_length=100, null=True) # bathroom attached with bedrooms
+    bathrooms_type = models.CharField(max_length=100, null=True) # common bathrooms
+    toilets_type = models.CharField(max_length=100, null=True) # common toilots
+    cuisine_name = models.CharField(max_length=100, null=True) # cuisine served
+
+
+# Hotel Registration Class
 class HotelRegistration(models.Model):
 
     hotel_name = models.CharField(max_length=100 , null=True) # Name of the hotel
@@ -79,54 +122,20 @@ class HotelRegistration(models.Model):
 
 
     # Foreighn Keys
-    # owner_id = models.ForeignKey(HotelOwner, on_delete=models.CASCADE)
-    # manager_id = models.ForeignKey(HotelManager, on_delete=models.CASCADE)
-    # common_bathroom_id = models.ForeignKey(CommonBathroom, on_delete=models.CASCADE)
-    # common_toilet_id = models.ForeignKey(CommonToilet, on_delete=models.CASCADE)
+    owner_id = models.ForeignKey(HotelOwner, related_name='owner_id', on_delete=models.CASCADE)
+    manager_id = models.ForeignKey(HotelManager, on_delete=models.CASCADE, related_name='manager_id')
+    common_bathroom_id = models.ForeignKey(CommonBathroom, on_delete=models.CASCADE, related_name='common_bathroom_id')
+    common_toilet_id = models.ForeignKey(CommonToilet, on_delete=models.CASCADE, related_name='common_toilet_id')
+    bedrooms_id = models.ForeignKey(Bedrooms, on_delete=models.CASCADE, related_name='bedrooms_id')
     
     
     def __str__(self):
         return self.hotel_name
 
 
-# Owner Class
-class HotelOwner(models.Model):
-    owner_name = models.CharField(max_length=30, null=True)
-    owner_ratio = models.CharField(max_length=30, null=True)
-    owner_full_address = models.CharField(max_length=200, null=True)
-    owner_telegraphic_address = models.CharField(max_length=200, null=True)
-    owner_telephone = models.CharField(max_length=15, null=True)
-    owner_id = models.ForeignKey(HotelRegistration, on_delete=models.CASCADE) # Owner Foreign Key to Hotel Registration
 
 
-# Hotel Manager Class
-class HotelManager(models.Model):
-    manager_name = models.CharField(max_length=30, null=True)
-    manager_ratio = models.CharField(max_length=30, null=True)
-    manager_full_address = models.CharField(max_length=200, null=True)
-    manager_telegraphic_address = models.CharField(max_length=200, null=True)
-    manager_telephone = models.CharField(max_length=15, null=True)
-    manager_id = models.ForeignKey(HotelRegistration, on_delete=models.CASCADE) # manager foreign key attach to hotel registration
 
-# Common Places Class
-class CommonBathroom(models.Model):
-    bathroom_no = models.CharField(max_length=10, null=True, blank=True) # Common Bathroom no
-    bathroom_floor = models.CharField(max_length=20, null=True, blank=True) # Common Floor No
-    
-    # common_place_id = models.ForeignKey(HotelRegistration, on_delete=models.CASCADE) # common place foreign key attach to hotel registration
-class CommonToilet(models.Model):
-    toilet_no = models.CharField(max_length=10, null=True, blank=True) #Common Toilet No
-    toilet_floor = models.CharField(max_length=20, null=True, blank=True) # Floor No
-# Furniture and Fixtures
-class Bedroom(models.Model):
-    bedrooms_type = models.CharField(max_length=100 , null=True) # Bedrooms
-    rooms_type = models.CharField(max_length=100, null=True) # Common Rooms
-    corridors_type = models.CharField(max_length=100, null=True) # Corridors and Galleries
-    attached_bathroom_type = models.CharField(max_length=100, null=True) # bathroom attached with bedrooms
-    bathrooms_type = models.CharField(max_length=100, null=True) # common bathrooms
-    toilets_type = models.CharField(max_length=100, null=True) # common toilots
-    cuisine_name = models.CharField(max_length=100, null=True) # cuisine served
-    furniture_id = models.ForeignKey(HotelRegistration, on_delete=models.CASCADE) # furniture foreign key attach to hotel registration
 
 
 
