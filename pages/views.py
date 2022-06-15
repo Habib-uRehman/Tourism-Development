@@ -35,13 +35,7 @@ def test(request):
 
 
 
-def signup(request):
-    return render (request, 'accounts/signup.html') 
-
-
-
-def signin(request):
-    return render (request, 'accounts/signin.html')                    
+                
 
 
 def create_book_form(request):

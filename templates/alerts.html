@@ -1,0 +1,19 @@
+
+
+{% if messages %}
+    {% for message in messages %}
+        <div id="message" class="container" style="color:rgb(214, 214, 214) ;">
+            <div class="alert alter-{{ message.tags }} alert-dismissible text-center" role="alert">
+                <button type="button" class="close btn btn-success" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+                <strong >
+                    {% if message.level == DEFAULT_MASSAGE_LEVELS.ERROR %}
+                    Error
+                    {% else %}
+                        {{message.tags|title}}
+                    {% endif %}
+                </strong>
+                {{message}}
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}

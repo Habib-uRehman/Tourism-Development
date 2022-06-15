@@ -1,5 +1,6 @@
 {% extends 'main.html' %}
 
+{% load widget_tweaks %}
 
 {% load static %}
 
@@ -28,15 +29,16 @@
         <div class="container space-y">
             <!-- <div class="row row-cols-1 g-4"> -->
             <div class="row touristGuide-content">
-                <form class="form" action="" method="POST" >
+              <form enctype="multipart/form-data" class="form" action="" method="POST" >
                     {% csrf_token %}
-                    {{form.as_p}}
-                <input type="submit" name="submit"> 
-                    <!-- <fieldset>
+                    <!-- {{form.as_p}}
+                <input type="submit" name="submit">  -->
+                    <fieldset> 
                         <legend>Travel Guide Registertaion</legend>
                         <div class="col-12 my-4">
                             <label for="" class="form-label" class="form-label">Name Of The Person</label>
-                            <input type="text" class="form-control" />
+                            
+                            {% render_field form.guide_name type="text" class="form-control" %}
                         </div>
                         <div class="form-row row">
                             <div class="col-12">
@@ -48,13 +50,16 @@
                             </div>
                             <div class="col-md-8  my-2">
                                 <label for="" class="form-label">Business Address</label>
-                                <input type="text" class="form-control " id="" value="">
+                                
+                                {% render_field form.business_address type="text" class="form-control" %}
+                                
                                 <small>(if Registered, give registered
                                     address). </small>
                             </div>
+                            
                             <div class="col-md-4 my-2">
                                 <label for="" class="form-label">Residential Address </label>
-                                <input type="text" class="form-control " id="" value="">
+                                 {% render_field form.residential_address type="text" class="form-control" %}
                             </div>
                         </div>
 
@@ -66,21 +71,20 @@
                             </h5>
                             <div class=" col-md-4   my-2">
                                 <label for="" class="form-label">Year of establisment</label>
-                                <input type="date" class="form-control" id="" placeholder="">
+                                {% render_field  form.year_of_establishment type="date" class="form-control" %}
+                                
                             </div>
                             <div class="col-md-4  my-2">
-                                <label for="" class="form-label">Telephone Number</label>
-                                <input type="number" class="form-control" id="" placeholder="">
-
+                                <label for="" class="form-label">Telephone Number</label>                         
+                                {% render_field form.telephone_number type="number" class="form-control" %}
                             </div>
                             <div class="col-md-4  my-2">
                                 <label for="" class="form-label">Telephone Number (Resedential)</label>
-                                <input type="number" class="form-control" id="" placeholder="">
-
+                                {% render_field form.residential_number type="number" class="form-control" %}
                             </div>
                             <div class="col-md-12 my-2">
                                 <label for="" class="form-label">Telegraphic/Telex/Cable Address.</label>
-                                <input type="text" class="form-control" id="" placeholder="">
+                                {% render_field form.telegraphic_address type="text" class="form-control" %}
                             </div>
 
                         </div>
@@ -88,16 +92,16 @@
                         <div class="form-row row">
                          
                             <div class="col-lg-4 col-md-6 my-2">
-                                <label for="" class="form-label">Educational Qualifications</label>
-                                <input type="text" class="form-control" id="" placeholder="">
+                                <label for="" class="form-label">Educational Qualifications</label> 
+                                {% render_field form.educational_qualifications type="text" class="form-control" %}
                             </div>
                             <div class="col-lg-4 col-md-6 my-2">
-                                <label for="" class="form-label">Experience as Tourist Guide</label>
-                                <input type="text" class="form-control" id="" placeholder="">
+                                <label for=""  class="form-label">Year of Experience as Tourist Guide</label>
+                                {% render_field form.year_of_experiance type="number" class="form-control" %}
                             </div>
                             <div class="col-lg-4 col-md-6 my-2">
-                                <label for="" class="form-label">Knowledge of Foreign Languages</label>
-                                <input type="text" class="form-control" id="" placeholder="">
+                                <label for="" class="form-label">Number of Foreign Languages</label>     
+                                {% render_field form.number_of_languages type="number" class="form-control" %}
                             </div>
 
                             <div class="col-md-12  my-2">
@@ -108,9 +112,12 @@
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#trainingModel">
                                     Yes
                                 </button>
-                                <button type="button" class="btn btn-danger">
-                                    No
+                                <button  class="btn btn-danger"  >
+                                    NO
+                                    {% render_field form.no_training type="checkbox" class="btn btn-danger"  %}
                                 </button>
+                                
+                           
                             </div>
 
                             <div class="form-row row">
@@ -121,14 +128,21 @@
                                 </h5>
                                 <div class="col-md-6 my-2">
                                     <label for="" class="form-label">Name of The Banker</label>
-                                    <input type="text" class="form-control" id="" value="">
+                                    
+                                    {% render_field form.bank_name type="text" class="form-control"  %}
                                 </div>
+
+
+
                                 <div class="col-md-6 my-2">
-                                    <label for="" class="form-label">Attach reference letter from the bank</label>
-                                    <input class="form-control" type="file" id="" multiple />
+                                    <label for="" class="form-label">Attach reference letter from the bank</label> 
+                                    {% render_field form.reference_letter type="file" class="form-control"  %}
                                 </div>
 
                             </div>
+
+
+
 
                             <div class="form-row row ">
                                 <div class="col-lg-7">
@@ -193,6 +207,9 @@
                                     </div>
                                 </div>
                             </div>
+
+
+
                             <div class="form-row row">
                                 <h5 class="mt-4 mb-2 form-Subhead">
                                     <u>
@@ -201,107 +218,90 @@
                                 </h5>
                                 <div class="col-md-6 my-2">
                                     <label for="" class="form-label">Capital Invested</label>
-                                    <input type="text" class="form-control" id="" value="">
+                                    
+                                    {% render_field form.capital_invested type="number" class="form-control"  %}
                                 </div>
+
+
                                 <div class="col-md-6 my-2">
                                     <label for="" class="form-label">Capital Investment Statment</label>
-                                    <input class="form-control" type="file" id="" multiple />
+                                    
+                                    {% render_field form.capital_investment_statement type="file" class="form-control"  %}
                                 </div>
 
                             </div>
                             <div class="form-row row">
+
+
                                 <h5 class="mt-4 mb-2 form-Subhead">
                                     <u>
-                                       Extra
+                                       Terms
                                 </u>
                                 </h5>
+
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-12 my-2">
-                                            <div class="form-group">
+                                            <div class="form-group" >
                                                 <div class="otherActivities">
-                                                    <input class="form-check-input" type="checkbox" value="" id="otherActivities">
-                                                    <label class="form-check-label" for="otherActivities"> Whether any other activities are proposed to be
-                                                        undertaken? If so, in what fields?</label>
+                                                    
+                                                    {% render_field  form.terms  type="checkbox" class=""  %}
+                                                  
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="row" id="otherActivities-detail" style="display: none">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label for="" class="form-label">Other Activities :</label>
-                                                        <textarea name="" id="" cols="30" rows="4" class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </div>       
                                     </div>
                                 </div>
 
-                                <div class="col-12 mb-4">
-                                    <div class="row">
-                                        <div class="col-12 my-2">
-                                            <div class="form-group">
-                                                <div class="partner-offense">
-                                                    <input class="form-check-input" type="checkbox" value="" id="partner-offense">
-                                                    <label class="form-check-label" for="partner-offense">  Please state if you or your partner, if anyone have been
-                                                        convicted of an offence, if so please give details.</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="row" id="partner-offense-detail" style="display: none">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label for="" class="form-label">Offence Detail:</label>
-                                                        <textarea name="" id="" cols="30" rows="4" class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row my-3">
-                                <div class="col-12 my--3">
-                                    <div class="form-group">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck3">
-                                            <label class="form-check-label " for="invalidCheck3">
-                                            I/we hereby solemnly declare that all the particulars give above are correct
-                                            </label>
+                           
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 my-3">
-                                    <div class="form-group">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck1">
-                                            <label class="form-check-label " for="invalidCheck1">
-                                            I/we hereby solemnly declare that if a licence is granted to me/us, I/We will abide by the Travel Agencies Act, 1976 and the Rules made their under the terms of the licence granted to me/us, and the code of conduct.
-                                        </label>
-                                            <small class="text-danger">
-                                            You must agree before submitting.
-                                        </small>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="col-12 my-4 pt-4 text-end">
-                                <button class="btn btn-success btn-lg">Submit</button>
+                                <input type="submit" name="submit" class="btn btn-success btn-lg">
                                 <button class="btn btn-danger btn-lg">Reset</button>
                             </div>
 
-                    </fieldset> -->
+                    </fieldset>
                 </form>
                 </div>
             </div>
     </section>
+
+ <!-- Modal -->
+        <div class="modal" id="trainingModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Training Details</h5>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12 my-2">
+                                <label for="" class="form-label">Training Institute Name</label>
+                                <input type="text" class="form-control " id="" value="">
+                            </div>
+                            <div class="col-md-6 my-2">
+                                <label for="" class="form-label">Start Date</label>
+                                <input type="date" class="form-control " id="" value="">
+                            </div>
+                            <div class="col-md-6 my-2">
+                                <label for="" class="form-label">End Date</label>
+                                <input type="date" class="form-control " id="" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <!-- Main Content End -->
 
 

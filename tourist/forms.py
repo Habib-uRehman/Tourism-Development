@@ -5,7 +5,8 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import touristguideform
 
 
-class Touristguideform(ModelForm):
+class Touristguideform(forms.ModelForm):
     class Meta:
         model = touristguideform
         fields = '__all__'
+        
