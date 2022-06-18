@@ -9,8 +9,6 @@ from multiselectfield import MultiSelectField
 
 
 
-# Create your models here.
-
 class furniture_dining(models.Model):
     furniture_type = models.CharField(max_length=100 , null=True)
 
