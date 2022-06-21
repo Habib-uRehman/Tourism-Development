@@ -39,15 +39,15 @@ def test(request):
     return render(request,"pages/test.html",context)
 
 
-def send_files(request):
-    if request.method == "POST" :
-        name = request.POST.get("filename")
-        myfile = request.FILES.getlist("uploadfoles")
+# def send_files(request):
+#     if request.method == "POST" :
+#         name = request.POST.get("filename")
+#         myfile = request.FILES.getlist("uploadfoles")
         
-        for f in myfile:
-            myuploadfile(f_name=name,myfiles=f).save()
+#         for f in myfile:
+#             myuploadfile(f_name=name,myfiles=f).save()
         
-        return redirect("fileapp:index")
+#         return redirect("fileapp:index")
 
                 
 
