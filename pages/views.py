@@ -47,7 +47,7 @@ def send_files(request):
         for f in myfile:
             myuploadfile(f_name=name,myfiles=f).save()
         
-        return redirect("fileapp:index")
+        # return redirect("fileapp:index")
 
                 
 
