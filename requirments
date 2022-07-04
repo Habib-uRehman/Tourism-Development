@@ -62,3 +62,4 @@ uritemplate==4.1.1
 urllib3==1.26.9
 virtualenv==20.13.0
 virtualenv-clone==0.5.7
+django-widget-tweaks=1.4.12
