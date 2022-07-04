@@ -1,18 +1,12 @@
+
 from django.db import models
 
-
-class Author(models.Model):
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
+# Create your models here.
 
 
-class Book(models.Model):
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    title = models.CharField(max_length=100)
-    number_of_pages = models.PositiveIntegerField(default=1)
+class myuploadfile(models.Model):
+    f_name = models.CharField(max_length=255)
+    myfiles = models.FileField(upload_to="")
 
     def __str__(self):
-        return self.title
-
+        return self.f_name
